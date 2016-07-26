@@ -64,14 +64,154 @@
       <li class="active">New Customized Report</li>
 	</ol> 
 
-  <button type="button" class="btn btn-default pull-right">Cancel</button>
-  <button type="button" class="btn btn-default pull-right">Save</button>
-  <button type="button" class="btn btn-primary pull-right">Run</button> 
-  
-  <h2>New Customized Report</h2>
-    
-    <h4>Based on Shipments report</h4>
-    
+
+    <div class="row" id="customize-page-header">
+      <div class="col-md-4">
+        <h2>New Customized Report</h2>
+        <h4>Based on Shipments report</h4>
+      </div>
+
+      <div class="col-md-4">
+        <h4>Schedule</h4>
+        <p>None. <a href="#">Add schedule</a>
+      </div>
+      
+        <button type="button" id="button-1" class="btn btn-default pull-right">Cancel</button>
+        <button type="button" id="button-1" class="btn btn-default pull-right">Save</button>
+        <button type="button" id="button-1" class="btn btn-primary pull-right">Run</button>
+        
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-default panel-dark">
+            <div class="panel-heading">
+              <h3 class="panel-title">Fields</h3>
+                        
+                </div>
+                    
+                    <div class="panel-body">
+                    
+                    
+              <!--fields list accordian-->
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                              <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                  Transportation
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+
+                                <table class="table">
+                                    <tr>
+                                        <td>Actual Arrival Final Destination</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Actual Delivery</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Actual Departure</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arrival Port</td>
+                                    </tr>  
+                                    <tr>
+                                        <td>Carrier Codet</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carrier Name</td>
+                                    </tr> 
+                                    <tr>
+                                        <td>Chargeable Weight</td>
+                                    </tr> 
+                                    <tr>
+                                        <td>Chargeable Weight Units</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Consignee Name</td>
+                                    </tr> 
+                                    <tr>
+                                        <td>Destination</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Expeditors Branch Destination</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Expeditors Branch Origin</td>
+                                    </tr>                                     
+                                </table> 
+
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                              <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  Distribution
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                              <div class="panel-body">
+                                links
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                              <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  Order Management
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                              <div class="panel-body">
+                                links
+                              </div>
+                            </div>
+                          </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                              <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                  Customs Declaration
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                              <div class="panel-body">
+                                links
+                              </div>
+                            </div>
+                          </div>
+
+
+
+                          
+                          
+                        </div>
+                        <!--/fields list accordian-->
+            </div>  
+                    
+                </div>
+                <!--/fields panel-->
+        
+            </div>
+        </div>
+    </div>
+
+
+
+      
    
        
       
