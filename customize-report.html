@@ -29,6 +29,23 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
   </head>
 
   <body>
@@ -109,19 +126,19 @@
 
                                 <table class="table">
                                     <tr>
-                                        <td>Actual Arrival Final Destination</td>
+                                        <td id="drag1" draggable="true" ondragstart="drag(event)">Actual Arrival Final Destination</td>
                                     </tr>
                                     <tr>
-                                        <td>Actual Delivery</td>
+                                        <td id="drag2" draggable="true" ondragstart="drag(event)">Actual Delivery</td>
                                     </tr>
                                     <tr>
-                                        <td>Actual Departure</td>
+                                        <td id="drag3" draggable="true" ondragstart="drag(event)">Actual Departure</td>
                                     </tr>
                                     <tr>
-                                        <td>Arrival Port</td>
+                                        <td id="drag4" draggable="true" ondragstart="drag(event)">Arrival Port</td>
                                     </tr>  
                                     <tr>
-                                        <td>Carrier Codet</td>
+                                        <td id="drag5" draggable="true" ondragstart="drag(event)" >Carrier Code</td>
                                     </tr>
                                     <tr>
                                         <td>Carrier Name</td>
@@ -206,24 +223,40 @@
             <div class="col-md-8">
               <div class="panel panel-default panel-dark">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Filters<img src="images/question-mark-icon.png" width="15" height="15" alt=" "></h3>
-                        
+                  <h3 class="panel-title">Filters <img src="images/question-mark-icon.png" width="15" height="15" alt=" "></h3>     
                 </div>
                     
                 <div class="panel-body">
+                  <!-- Shipment milestone button -->
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Select milestone <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
+
 
           <!--columns panel-->
             <div class="col-md-8">
               <div class="panel panel-default panel-dark">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Columns<img src="images/question-mark-icon.png" width="15" height="15" alt=" "></h3>
-                        
+                  <h3 class="panel-title">Columns <img src="images/question-mark-icon.png" width="15" height="15" alt=" "> <small><a href="#">Edit Sort Order</a></small></h3>
                 </div>
                     
-                <div class="panel-body">
+                <div class="panel-body" ondrop="drop(event)" ondragover="allowDrop(event)">
+                  <button class="btn btn-default">Expeditors Reference <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
+                  <button class="btn btn-default">Origin <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></button>
+                  <button class="btn btn-default">Destination <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></button>
+                  <button class="btn btn-default">Status <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></button>
+                  <button class="btn btn-default">Primary Reference <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></button>
+                  <div id="drop-here">Drop field here</div>
                 </div>
               </div>
             </div>
