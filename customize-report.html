@@ -53,7 +53,7 @@
   <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -75,7 +75,7 @@
       </div>
     </nav>
 
-    <div class="container starter-template">
+    <div class="container-fluid starter-template">
 
 	<ol class="breadcrumb">
   		<li><a href="index.html">Home</a></li>
@@ -85,12 +85,12 @@
 
 
     <div class="row" id="customize-page-header">
-      <div class="col-md-4">
+      <div class="col-lg-4">
         <h2>New Customized Report</h2>
         <h4>Based on Shipments report</h4>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-lg-4">
         <h4>Schedule</h4>
         <p>None. <a href="#">Add schedule</a>
       </div>
@@ -101,9 +101,9 @@
         
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-4">
               <div class="panel panel-default panel-dark">
             <div class="panel-heading">
               <h3 class="panel-title">Fields</h3>
@@ -166,11 +166,17 @@
                                     </tr>                                     
                                 </table> -->
                                 <div id='left-defaults'>
-                                  <button class="btn btn-default">Expeditors Reference <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
-                                  <button class="btn btn-default">Origin <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></button>
-                                  <button class="btn btn-default">Destination <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></button>
-                                  <button class="btn btn-default">Status <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></button>
-                                  <button class="btn btn-default">Primary Reference <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></button>
+                                  <button class="btn btn-default btn-block">Actual Arrival Final Destination</button>
+                                  <button class="btn btn-default btn-block">Actual Delivery</button>
+                                  <button class="btn btn-default btn-block">Actual Departure</button>
+                                  <button class="btn btn-default btn-block">Arrival Port</button>
+                                  <button class="btn btn-default btn-block">Carrier Code</button>
+                                  <button class="btn btn-default btn-block">Carrier Name</button>
+                                  <button class="btn btn-default btn-block">Chargeable Weight</button>
+                                  <button class="btn btn-default btn-block">Consignee Name</button>
+                                  <button class="btn btn-default btn-block">Destination</button>
+                                  <button class="btn btn-default btn-block">Expeditors Branch Destination</button>
+                                  <button class="btn btn-default btn-block">Expeditors Branch Origin</button>
                                 </div>
                               </div>
                           </div>
@@ -229,14 +235,14 @@
             </div>
 
           <!--filters panel-->
-            <div class="col-md-8 pull-right">
+            <div class="col-lg-8 pull-right">
               <div class="panel panel-default panel-dark">
                 <div class="panel-heading">
                   <h3 class="panel-title">Filters <img src="images/question-mark-icon.png" width="15" height="15" alt=" "></h3>     
                 </div>
                     
                 <div class="panel-body">
-                  <div id="origin-field">
+                  <div id="default-filter">
                     <p>Origin <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></p>
                     <div class="input-group">
                     <input type="text" class="form-control" placeholder="Choose origins" aria-describedby="basic-addon1">
@@ -244,28 +250,28 @@
                   </div>
 
 
-                  <div id="destination-field">
+                  <div id="default-filter">
                     <p>Destination <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></p>
                     <div class="input-group">
                     <input type="text" class="form-control" placeholder="Choose destinations" aria-describedby="basic-addon1">
                     </div>
                   </div>
 
-                  <div id="expeditors-reference-field">
+                  <div id="default-filter">
                     <p>Expeditors Reference <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></p>
                     <div class="input-group">
                     <input type="text" class="form-control" placeholder="Enter references" aria-describedby="basic-addon1">
                     </div>
                   </div>
 
-                  <div id="status-field">
+                  <div id="default-filter">
                     <p>Status <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></p>
                     <div class="input-group">
                     <input type="text" class="form-control" placeholder="Choose statuses" aria-describedby="basic-addon1">
                     </div>
                   </div>
 
-                  <div id="shipment-milestone-field">
+                  <div id="default-filter">
                     <p>Shipment milestone <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></p>
                   <!-- Shipment milestone button -->
                   <div class="btn-group">
@@ -289,7 +295,7 @@
                   </div>
                   </div>
 
-                  <div id="mode-field">
+                  <div id="default-filter">
                     <p>Mode <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></p>
                     <div class="input-group">
                     <input type="text" class="form-control" placeholder="Choose modes" aria-describedby="basic-addon1">
@@ -303,7 +309,7 @@
 
 
           <!--columns panel-->
-            <div class="col-md-8 pull-right">
+            <div class="col-lg-8 pull-right">
               <div class="panel panel-default panel-dark">
                 <div class="panel-heading">
                   <h3 class="panel-title">Columns <img src="images/question-mark-icon.png" width="15" height="15" alt=" "> <small><a href="#">Edit Sort Order</a></small></h3>

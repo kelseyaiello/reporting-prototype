@@ -21,12 +21,19 @@ body {
 }
 
 #drop-here {
-	width:150px;
+	width:200px;
 	height:37px;
 	padding:6px;
 	border:2px dotted #aaaaaa;
 	border-radius: 3px;
 	margin:3px;
 	text-align: center;
+}
+
+#default-filter {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
 }
 
