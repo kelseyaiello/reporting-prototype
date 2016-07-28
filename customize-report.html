@@ -95,15 +95,17 @@
         <p>None. <a href="#">Add schedule</a>
       </div>
       
+      <div class="col-lg-4">
         <button type="button" id="button-1" class="btn btn-default pull-right">Cancel</button>
         <button type="button" id="button-1" class="btn btn-default pull-right">Save</button>
         <button type="button" id="button-1" class="btn btn-primary pull-right">Run</button>
+      </div>
         
     </div>
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-3">
               <div class="panel panel-default panel-dark">
             <div class="panel-heading">
               <h3 class="panel-title">Fields</h3>
@@ -166,17 +168,17 @@
                                     </tr>                                     
                                 </table> -->
                                 <div id='left-defaults'>
-                                  <button class="btn btn-default btn-block">Actual Arrival Final Destination</button>
-                                  <button class="btn btn-default btn-block">Actual Delivery</button>
-                                  <button class="btn btn-default btn-block">Actual Departure</button>
-                                  <button class="btn btn-default btn-block">Arrival Port</button>
-                                  <button class="btn btn-default btn-block">Carrier Code</button>
-                                  <button class="btn btn-default btn-block">Carrier Name</button>
-                                  <button class="btn btn-default btn-block">Chargeable Weight</button>
-                                  <button class="btn btn-default btn-block">Consignee Name</button>
-                                  <button class="btn btn-default btn-block">Destination</button>
-                                  <button class="btn btn-default btn-block">Expeditors Branch Destination</button>
-                                  <button class="btn btn-default btn-block">Expeditors Branch Origin</button>
+                                  <button class="btn btn-default btn-block"><span class="pull-left">Actual Arrival Final Destination</span></button>
+                                  <button class="btn btn-default btn-block"><span class="pull-left">Actual Delivery</span></button>
+                                  <button class="btn btn-default btn-block"><span class="pull-left">Actual Departure</span></button>
+                                  <button class="btn btn-default btn-block"><span class="pull-left">Arrival Port</span></button>
+                                  <button class="btn btn-default btn-block"><span class="pull-left">Carrier Code</span></button>
+                                  <button class="btn btn-default btn-block"><span class="pull-left">Carrier Name</span></button>
+                                  <button class="btn btn-default btn-block"><span class="pull-left">Chargeable Weight</span></button>
+                                  <button class="btn btn-default btn-block"><span class="pull-left">Consignee Name</span></button>
+                                  <button class="btn btn-default btn-block"><span class="pull-left">Destination</span></button>
+                                  <button class="btn btn-default btn-block"><span class="pull-left">Expeditors Branch Destination</span></button>
+                                  <button class="btn btn-default btn-block"><span class="pull-left">Expeditors Branch Origin</span></button>
                                 </div>
                               </div>
                           </div>
@@ -235,7 +237,7 @@
             </div>
 
           <!--filters panel-->
-            <div class="col-lg-8 pull-right">
+            <div class="col-lg-9 pull-right">
               <div class="panel panel-default panel-dark">
                 <div class="panel-heading">
                   <h3 class="panel-title">Filters <img src="images/question-mark-icon.png" width="15" height="15" alt=" "></h3>     
@@ -271,29 +273,29 @@
                     </div>
                   </div>
 
-                  <div id="default-filter">
+                  <!-- <div id="default-filter">
                     <p>Shipment milestone <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></p>
-                  <!-- Shipment milestone button -->
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Select milestone <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                    </ul>
-                    <br>
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Select date <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                    </ul>
-                  </div>
-                  </div>
+                  Shipment milestone button
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select milestone <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                      </ul>
+                      <br>
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select date <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </div>-->
 
                   <div id="default-filter">
                     <p>Mode <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></p>
@@ -301,7 +303,7 @@
                     <input type="text" class="form-control" placeholder="Choose modes" aria-describedby="basic-addon1">
                     </div>
                   </div>
-
+                  <span id="drop-here">Drop field here</span>
                 </div> <!-- end of filters panel body -->
 
               </div>
@@ -309,7 +311,7 @@
 
 
           <!--columns panel-->
-            <div class="col-lg-8 pull-right">
+            <div class="col-lg-9 pull-right">
               <div class="panel panel-default panel-dark">
                 <div class="panel-heading">
                   <h3 class="panel-title">Columns <img src="images/question-mark-icon.png" width="15" height="15" alt=" "> <small><a href="#">Edit Sort Order</a></small></h3>
