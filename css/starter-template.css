@@ -38,7 +38,13 @@ body {
   margin: 0.5em;
 }
 
-#left-defaults {
-  text-align: left;
+#headingOne-1 {
+  background-color: white;
+  text-decoration: underline;
+  border: 0;
+}
+
+#accordion-sub {
+  padding: 0px;
 }
 

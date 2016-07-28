@@ -118,7 +118,7 @@
               <!--fields list accordian-->
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-                          <div id='left-default' class="panel panel-default" >
+                          <div class="panel panel-default" >
                             <div class="panel-heading" role="tab" id="headingOne">
                               <h4 class="panel-title">
                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -126,61 +126,66 @@
                                 </a>
                               </h4>
                             </div>
-
                             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 
-                               <!-- <table  id='left-defaults' class="table" >
-                                    <tr>
-                                        <td>Actual Arrival Final Destination</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Actual Delivery</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Actual Departure</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Arrival Port</td>
-                                    </tr>  
-                                    <tr>
-                                        <td>Carrier Code</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Carrier Name</td>
-                                    </tr> 
-                                    <tr>
-                                        <td>Chargeable Weight</td>
-                                    </tr> 
-                                    <tr>
-                                        <td>Chargeable Weight Units</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Consignee Name</td>
-                                    </tr> 
-                                    <tr>
-                                        <td>Destination</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Expeditors Branch Destination</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Expeditors Branch Origin</td>
-                                    </tr>                                     
-                                </table> -->
-                                <div id='left-defaults'>
-                                  <button class="btn btn-default btn-block"><span class="pull-left">Actual Arrival Final Destination</span></button>
-                                  <button class="btn btn-default btn-block"><span class="pull-left">Actual Delivery</span></button>
-                                  <button class="btn btn-default btn-block"><span class="pull-left">Actual Departure</span></button>
-                                  <button class="btn btn-default btn-block"><span class="pull-left">Arrival Port</span></button>
-                                  <button class="btn btn-default btn-block"><span class="pull-left">Carrier Code</span></button>
-                                  <button class="btn btn-default btn-block"><span class="pull-left">Carrier Name</span></button>
-                                  <button class="btn btn-default btn-block"><span class="pull-left">Chargeable Weight</span></button>
-                                  <button class="btn btn-default btn-block"><span class="pull-left">Consignee Name</span></button>
-                                  <button class="btn btn-default btn-block"><span class="pull-left">Destination</span></button>
-                                  <button class="btn btn-default btn-block"><span class="pull-left">Expeditors Branch Destination</span></button>
-                                  <button class="btn btn-default btn-block"><span class="pull-left">Expeditors Branch Origin</span></button>
+                              <!--sub category #1-->
+                              <div class="panel-group-sub" id="accordion-sub" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="headingOne-1">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#accordion-sub" href="#collapseOne-sub" aria-expanded="true" aria-controls="collapseOne-sub">
+                                        Sub Category #1
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseOne-sub" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-1">
+                                    <div class="panel-body">
+                                      <div id='left-defaults'>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Actual Arrival Final Destination</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Actual Delivery</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Actual Departure</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Arrival Port</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Carrier Code</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Carrier Name</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Chargeable Weight</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Consignee Name</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Destination</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Expeditors Branch Destination</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Expeditors Branch Origin</span></button>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
+                              </div> <!--end of first sub category-->
+
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="headingOne-1">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#accordion-sub" href="#collapseTwo-sub" aria-expanded="true" aria-controls="collapseTwo-sub">
+                                        Sub Category #2
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseTwo-sub" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne-1">
+                                    <div class="panel-body">
+                                      <div id='left-defaults'>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Actual Arrival Final Destination</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Actual Delivery</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Actual Departure</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Arrival Port</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Carrier Code</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Carrier Name</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Chargeable Weight</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Consignee Name</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Destination</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Expeditors Branch Destination</span></button>
+                                        <button class="btn btn-default btn-block"><span class="pull-left">Expeditors Branch Origin</span></button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div><!--end of second sub category-->
+
+                            </div>
                           </div>
 
                           <div class="panel panel-default">
