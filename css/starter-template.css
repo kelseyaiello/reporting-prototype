@@ -52,3 +52,16 @@ body {
   background-color: #fff;
 }
 
+
+.hide-icon{ 
+	opacity: 0;
+    filter: alpha(opacity=0); /* For IE8 and earlier */
+}
+
+.showhim:hover .hide-icon{
+	opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+	transition: opacity .25s ease-out;
+   -moz-transition: opacity .25s ease-out;
+   -webkit-transition: opacity .25s ease-out;
+}

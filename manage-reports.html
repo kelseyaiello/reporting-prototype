@@ -49,7 +49,7 @@
         <div id="navbar" class="collapse navbar-collapse">
         	<!--
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -73,22 +73,25 @@
             <thead> 
                 <tr> 
                     <th>Name</th> 
+                    <th></th>
                 </tr> 
             </thead> 
             <tbody> 
-                <tr> 
-                        <td><img src="images/icon-reports-container-analysis.png" width="45" height="19" alt=" "><a href="#">Container Analysis</a></td>
+                <tr class="showhim"> 
+                        <td><img src="images/icon-reports-bookmark.png" width="18" height="19" alt=" "> Container Analysis <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button> </td>
               </tr> 
-                 <tr> 
-                        <td><img src="images/icon-reports-shipments.png" width="45" height="19" alt=" "><a href="#">Shipments</a></td>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-bookmark.png" width="18" height="19" alt=" "> Shipments <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
 
                  </tr> 
             </tbody> 
         </table>
         
     <!-- Button trigger modal -->
-        <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#myModal">
-        New customized report
+        <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#myModal" style="margin-bottom:5px">
+        New
         </button> 
         
          <!-- new customized report modal -->
@@ -101,18 +104,18 @@
                 </div>
                 <div class="modal-body">
                 
-                <p>Select a standard report on which to base your customized report, or <a href="#">create a report from scratch.</a></p>
+                <p>Select a standard report on which to base your customized report, or create a report from scratch.</a></p>
                   
                   <ul class="list-unstyled">
                       <li><strong>Customs Declarations</strong></li>
-                      <li><a href="#">Advanced Customs Invoice Item Extract</a></li>
-                      <li><a href="#">Advanced Customs Invoice Line Extract</a></li>
+                      <li>Advanced Customs Invoice Item Extract</a></li>
+                      <li>Advanced Customs Invoice Line Extract</a></li>
                   </ul>
                   <ul class="list-unstyled">
                       <li><strong>Order Management</strong></li>
-                      <li><a href="#">Items as Ordered</a></li>
-                      <li><a href="#">Items as Booked/Shipped/Delivered</a></li>
-                      <li><a href="#">Items in Containers</a></li>
+                      <li>Items as Ordered</a></li>
+                      <li>Items as Booked/Shipped/Delivered</a></li>
+                      <li>Items in Containers</a></li>
                   </ul>
                   <ul class="list-unstyled">
                       <li><strong>Transportation</strong></li>
@@ -134,15 +137,17 @@
             <thead> 
                 <tr> 
                     <th>Name</th> 
+                    <th></th>
                 </tr> 
             </thead> 
             <tbody> 
-                <tr> 
-                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt=" "> <a href="#">Container Analysis</a></td>
+                <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt=" "> Items in Containers - Daily <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button> <button class="btn btn-default btn-xs" type="submit">Edit</button> <button class="btn btn-default btn-xs" type="submit">Delete</button></td>
               </tr> 
-                 <tr> 
-                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt=" "> <a href="#">Shipments</a></td>
-
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt=" "> Shipments - In Transit - Daily <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+						<td><button class="btn btn-default btn-xs" type="submit">Run</button> <button class="btn btn-default btn-xs" type="submit">Edit</button> <button class="btn btn-default btn-xs" type="submit">Delete</button></td>
                  </tr> 
             </tbody> 
         </table>
@@ -153,54 +158,275 @@
         <table class="table table-hover table-background"> 
             <thead> 
                 <tr> 
-                    <th>Name</th> 
+                    <th>Name</th>
+                    <th></th> 
                     <th>Type</th> 
                 </tr> 
             </thead> 
             <tbody> 
-                <tr> 
-                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt=" "> <a href="#">Air and Ocean Analysis</a></td>
-                        <td></td>
+            	<tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Advanced Customs Invoice Item Extract <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Customs Brokerage</td>
+                </tr>
+                <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Advanced Customs Invoice Line Extract <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Customs Brokerage</td>
+                </tr>
+                <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Brokerage <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Customs Brokerage</td>
+                </tr>
+                <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Sourcing Profile Map - Europe <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Customs Brokerage</td>
+                </tr>
+                <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Sourcing Profile Map - United States <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Customs Brokerage</td>
+                </tr>
+                <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> US Brokerage <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Customs Brokerage</td>
+                </tr>
+                <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> US Entry Details Analysis <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Customs Brokerage</td>
+                 </tr>
+                    
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Real Time Inventory <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"> </td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Distribution</td>
+                 </tr>
+                 
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Real Time Inventory (Extract) <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Distribution</td>
+                 </tr>
+                 
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Shipping Report <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Distribution</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Receipt Report <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Distribution</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Activity Report <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Distribution</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Open Orders Report (Extract) <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Distribution</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Open Orders Report <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Distribution</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Inventory Aging Report (Extract) <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Distribution</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Inventory Aging Report <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Distribution</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Receipt PO Activity <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"> </td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Distribution</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Receipt Visibility Search <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Distribution</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Work Order <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Distribution</td>
+                 </tr>
+                
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Carrier MQC <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Consol Planning <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"> </td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Item Level Analysis <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Item Value in Transit <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Items as Booked/Shipped/Delivered <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Items as Ordered <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Items in Containers <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"> </td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Lead Time Analysis <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> OM Item Landed Cost <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> OM Landed Cost by Date <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> OM Landed Cost by Reference <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> OM Performance <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Order Sourcing Map <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Order Status Report <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"> </td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Order/Item Arrival Schedule <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Orders Received, Not Shipped <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Shipped Item Summary <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"> </td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Shipped Order/Item Search <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td><td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Supplier Scorecard <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Vendor Performance Detail <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Vendor Performance Summary <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Order Management</td>
+                 </tr>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Spend <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Spend</td>
+                </tr> 
+                <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Spend by Lane <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Spend</td>
+                </tr> 
+                <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Air and Ocean Analysis <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+                        <td>Transportation</td>
               </tr> 
-                 <tr> 
-                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt=" "> <a href="#">CO2 Analysis</a></td>
-						<td></td>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> CO2 Analysis <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Transportation</td>
                  </tr> 
-                 <tr> 
-                        <td><a href="#">Container Analysis</a></td>
-						<td></td>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Container Analysis <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Transportation</td>
                  </tr>
-                 <tr> 
-                        <td><a href="#"></a></td>
-						<td></td>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Container Utilization <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Transportation</td>
                  </tr>
-                 <tr> 
-                        <td><a href="#"></a></td>
-						<td></td>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Ocean Services Customer Summary <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Transportation</td>
                  </tr>
-                 <tr> 
-                        <td><a href="#"></a></td>
-						<td></td>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Shipment Analysis <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Transportation</td>
                  </tr>
-                 <tr> 
-                        <td><a href="#"></a></td>
-						<td></td>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Shipment Status Map <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Transportation</td>
                  </tr>
-                 <tr> 
-                        <td><a href="#"></a></td>
-						<td></td>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-tabular.png" width="19" height="19" alt="Tabular"> Shipments <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Transportation</td>
                  </tr>
-                 <tr> 
-                        <td><a href="#"></a></td>
-						<td></td>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Transit Time Analysis <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Transportation</td>
                  </tr>
-                 <tr> 
-                        <td><a href="#"></a></td>
-						<td></td>
-                 </tr>
-                 <tr> 
-                        <td><a href="#"></a></td>
-						<td></td>
+                 <tr class="showhim"> 
+                        <td><img src="images/icon-reports-analytics.png" width="19" height="19" alt="Dashboard"> Transit Time Breakdown <img src="images/icon-info.png" width="18" height="18" alt=" " class="hide-icon"></td>
+                        <td><button class="btn btn-default btn-xs" type="submit">Run</button></td>
+						<td>Transportation</td>
                  </tr>
             </tbody> 
         </table> 
