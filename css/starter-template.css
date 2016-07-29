@@ -53,6 +53,7 @@ body {
 }
 
 
+
 .hide-icon{ 
 	opacity: 0;
     filter: alpha(opacity=0); /* For IE8 and earlier */
@@ -65,3 +66,15 @@ body {
    -moz-transition: opacity .25s ease-out;
    -webkit-transition: opacity .25s ease-out;
 }
+
+.form-control-no-border:focus {
+  border-color:#ccc;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.results-buttons {
+  margin-bottom: 10px;
+}
+
