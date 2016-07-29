@@ -52,3 +52,10 @@ body {
   background-color: #fff;
 }
 
+.form-control-no-border:focus {
+  border-color:#ccc;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
