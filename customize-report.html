@@ -32,6 +32,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+
     <script>
         function allowDrop(ev) {
             ev.preventDefault();
@@ -140,7 +142,7 @@
                                   </div>
                                   <div id="collapseOne-sub" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-1">
                                     <div class="panel-body">
-                                      <div id='left-defaults'>
+                                      <div class="fixed-button-width" id='left-defaults'>
                                         <button class="btn btn-default btn-block"><span class="pull-left">Actual Arrival Final Destination</span></button>
                                         <button class="btn btn-default btn-block"><span class="pull-left">Actual Delivery</span></button>
                                         <button class="btn btn-default btn-block"><span class="pull-left">Actual Departure</span></button>
@@ -249,38 +251,37 @@
                 </div>
                     
                 <div class="panel-body">
-                  <div id="default-filter">
+                  <div class="default-filter">
                     <p>Origin <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></p>
                     <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Choose origins" aria-describedby="basic-addon1">
+                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Choose origin</button>
                     </div>
                   </div>
 
 
-                  <div id="default-filter">
+                  <div class="default-filter">
                     <p>Destination <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></p>
                     <div class="input-group">
                     <input type="text" class="form-control" placeholder="Choose destinations" aria-describedby="basic-addon1">
                     </div>
                   </div>
 
-                  <div id="default-filter">
+                  <div class="default-filter">
                     <p>Expeditors Reference <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></p>
                     <div class="input-group">
                     <input type="text" class="form-control" placeholder="Enter references" aria-describedby="basic-addon1">
                     </div>
                   </div>
 
-                  <div id="default-filter">
+                  <div class="default-filter">
                     <p>Status <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></p>
                     <div class="input-group">
                     <input type="text" class="form-control" placeholder="Choose statuses" aria-describedby="basic-addon1">
                     </div>
                   </div>
 
-                  <!-- <div id="default-filter">
+                  <!--<div class="default-filter" id="shipment-milestone-filter">
                     <p>Shipment milestone <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></p>
-                  Shipment milestone button
                     <div class="btn-group">
                       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Select milestone <span class="caret"></span>
@@ -302,13 +303,13 @@
                     </div>
                   </div>-->
 
-                  <div id="default-filter">
+                  <div class="default-filter">
                     <p>Mode <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></p>
                     <div class="input-group">
                     <input type="text" class="form-control" placeholder="Choose modes" aria-describedby="basic-addon1">
                     </div>
                   </div>
-                  <span id="drop-here">Drop field here</span>
+                  <div class="fixed-button-width" id="drop-here">Drop field here</div>
                 </div> <!-- end of filters panel body -->
 
               </div>
@@ -322,13 +323,16 @@
                   <h3 class="panel-title">Columns <img src="images/question-mark-icon.png" width="15" height="15" alt=" "> <small><a href="#">Edit Sort Order</a></small></h3>
                 </div>
                     
-                <div id='right-defaults' class="panel-body">
-                  <button class="btn btn-default">Expeditors Reference <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
-                  <button class="btn btn-default">Origin <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></button>
-                  <button class="btn btn-default">Destination <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></button>
-                  <button class="btn btn-default">Status <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></button>
-                  <button class="btn btn-default">Primary Reference <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></button>
-                  <div id="drop-here">Drop field here</div>
+                <div class="panel-body">
+                  <div class="fixed-button-width" id='right-defaults'>
+                  <button class="btn btn-default btn-block" id="expeditors-reference-button"><span class="pull-left">Expeditors Reference</span> <span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true" id="remove"></span></button>
+                  <p id="demo"></p>
+                  <button class="btn btn-default btn-block"><span class="pull-left">Origin</span> <span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></button>
+                  <button class="btn btn-default btn-block"><span class="pull-left">Destination</span> <span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></button>
+                  <button class="btn btn-default btn-block"><span class="pull-left">Status</span> <span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></button>
+                  <button class="btn btn-default btn-block"><span class="pull-left">Primary Reference</span> <span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></button>
+                  </div>
+                  <div class="fixed-button-width" id="drop-here">Drop field here</div>
                 </div>
               </div>
             </div>
@@ -362,5 +366,6 @@
 
     <script src='dist/dragula.js'></script>
     <script src='example/example.min.js'></script>
+    <script src='myscript.js'></script>
   </body>
 </html>

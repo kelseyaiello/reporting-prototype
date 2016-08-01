@@ -21,7 +21,6 @@ body {
 }
 
 #drop-here {
-	width:250px;
 	height:37px;
 	padding:6px;
 	border:2px dotted #aaaaaa;
@@ -31,7 +30,7 @@ body {
   display: inline-block;
 }
 
-#default-filter {
+.default-filter {
   display: inline-block;
   width: 200px;
   height: 100px;
@@ -78,3 +77,6 @@ body {
   margin-bottom: 10px;
 }
 
+.fixed-button-width {
+  width: 300px;
+}
