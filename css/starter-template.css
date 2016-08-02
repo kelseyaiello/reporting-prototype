@@ -31,7 +31,7 @@ body {
 }
 
 .default-filter {
-  display: inline-block;
+  display: inline-table;
   margin: 0.5em;
 }
 
@@ -75,21 +75,8 @@ body {
   margin-bottom: 10px;
 }
 
-.field {
-  border: 1px solid #aaaaaa;
-  border-radius: 4px;
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
-  display: inline-block;
-  width: 300px;
-}
 
 .fixed-button-width {
   width: 300px;
-}
-
-#filters {
-  height: 10px;
 }
 

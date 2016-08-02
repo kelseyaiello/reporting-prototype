@@ -1,0 +1,82 @@
+body {
+  padding-top: 80px;
+}
+
+.row {
+  padding-top: 20px;
+}
+
+#accordion {
+  padding-top: 20px;
+}
+
+.panel-dark > .panel-heading {
+  color: #333;
+  background-color: #ddd;
+  border-color: #ddd;
+}
+
+#button-1 {
+	margin: 2px; 
+}
+
+#drop-here {
+	height:37px;
+	padding:6px;
+	border:2px dotted #aaaaaa;
+	border-radius: 4px;
+	margin:3px;
+	text-align: center;
+  display: inline-block;
+}
+
+.default-filter {
+  display: inline-table;
+  margin: 0.5em;
+}
+
+#headingOne-1 {
+  background-color: white;
+  text-decoration: underline;
+  border: 0;
+}
+
+#accordion-sub {
+  padding: 0px;
+}
+
+.table-background {
+  background-color: #fff;
+}
+
+
+
+.hide-icon{ 
+	opacity: 0;
+    filter: alpha(opacity=0); /* For IE8 and earlier */
+}
+
+.showhim:hover .hide-icon{
+	opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+	transition: opacity .25s ease-out;
+   -moz-transition: opacity .25s ease-out;
+   -webkit-transition: opacity .25s ease-out;
+}
+
+.form-control-no-border:focus {
+  border-color:#ccc;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.results-buttons {
+  margin-bottom: 10px;
+}
+
+
+.fixed-button-width {
+  width: 300px;
+}
+
