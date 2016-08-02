@@ -58,12 +58,11 @@
       </div>
     </nav>
 
-    <div class="container starter-template">
+    <div class="container-fluid starter-template">
 
     <ol class="breadcrumb">
         <li><a href="index.html">Home</a></li>
         <li><a href="manage-reports.html">Manage Reports</a></li>
-        <li><a href="customize-report.html">New Customized Report</a></li>
         <li class="active">Run</li>
     </ol>  
 
@@ -74,37 +73,74 @@
         <button type="button" id="button-1" class="btn btn-default pull-right">Customize</button>
         <button type="button" id="button-1" class="btn btn-primary pull-right">Run</button>
 
-        <h2>Shipment Report</h2>
+        <h2>Shipments</h2>
         
     </div>
     
           <!--filters panel-->
-            <div class="container choosen-filters">
+            <div class="container-fluid choosen-filters">
               <div class="panel panel-default panel-dark">
 
                     
                 <div class="panel-body">
-                  <div class="default-filter">
+                  <span class="default-filter">
                     <p>Origin</p>
-                    <div class="input-group">
-                    <input type="text" class="form-control form-control-no-border" placeholder="China" aria-describedby="basic-addon1">
-                    </div>
-                  </div>
+                    <span class="input-group">
+                    <input type="text" class="form-control" placeholder="Choose origins" aria-describedby="basic-addon1">
+                    </span>
+                  </span>
 
 
-                  <div class="default-filter">
+                  <span class="default-filter">
                     <p>Destination</p>
-                    <div class="input-group">
-                    <input type="text" class="form-control form-control-no-border" placeholder="New York (JFK)" aria-describedby="basic-addon1">
-                    </div>
-                  </div>
+                    <span class="input-group">
+                    <input type="text" class="form-control" placeholder="Choose destinations" aria-describedby="basic-addon1">
+                    </span>
+                  </span>
 
-                  <div class="default-filter">
+                  <span class="default-filter">
+                    <p>Expeditors Reference</p>
+                    <span class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter references" aria-describedby="basic-addon1">
+                    </span>
+                  </span>
+
+                  <span class="default-filter">
                     <p>Status</p>
-                    <div class="input-group">
-                    <input type="text" class="form-control form-control-no-border" placeholder="In Transit" aria-describedby="basic-addon1">
-                    </div>
-                  </div>
+                    <span class="input-group">
+                    <input type="text" class="form-control" placeholder="Choose statuses" aria-describedby="basic-addon1">
+                    </span>
+                  </span>
+
+                    <span class="default-filter" id="shipment-milestone-filter">
+                        <p>Shipment milestone</p>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select milestone <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                          </ul>
+                          <br>
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select date <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                          </ul>
+                        </div>
+                      </span>
+
+                  <span class="default-filter">
+                    <p>Mode</p>
+                    <span class="input-group">
+                    <input type="text" class="form-control" placeholder="Choose modes" aria-describedby="basic-addon1">
+                    </span>
+                  </span>
 
                 </div> <!-- end of filters panel body -->
 
