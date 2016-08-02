@@ -320,9 +320,151 @@
             <div class="col-lg-9 pull-right">
               <div class="panel panel-default panel-dark">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Columns <img src="images/question-mark-icon.png" width="15" height="15" alt=" "> <small><a href="#">Edit Sort Order</a></small></h3>
+                  <!-- trigger modal -->
+                  <a href="#SortOrderModal" data-toggle="modal" class="pull-right">Edit sort order</a>
+                  <h3 class="panel-title">Columns <img src="images/question-mark-icon.png" width="15" height="15" alt=" "></h3>
                 </div>
-                    
+
+                <!-- sort order modal -->
+                <div class="modal fade" id="SortOrderModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Edit sort order</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+                        <ul class="list-inline">
+                          <li><strong>1</strong></li>
+                          <li style="width:180px"><!-- replace hardcoded width with dynamic width to accomodate longest column name on report -->
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Expeditors Reference <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Destination</a></li>
+                                <li><a href="#">Expeditors Reference</a></li>
+                                <li><a href="#">Mode</a></li>
+                                <li><a href="#">Origin</a></li>
+                                <li><a href="#">Status</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">None</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="btn-group" role="group" aria-label="...">
+                              <button type="button" class="btn btn-default active">
+                                <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Ascending
+                              </button>
+                              <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Descending
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+
+                        <ul class="list-inline">
+                          <li><strong>2</strong></li>
+                          <li style="width:180px"><!-- replace hardcoded width with dynamic width to accomodate longest column name on report -->
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                None <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Destination</a></li>
+                                <li><a href="#">Expeditors Reference</a></li>
+                                <li><a href="#">Mode</a></li>
+                                <li><a href="#">Origin</a></li>
+                                <li><a href="#">Status</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">None</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="btn-group" role="group" aria-label="...">
+                              <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Ascending
+                              </button>
+                              <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Descending
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+
+                        <ul class="list-inline">
+                          <li><strong>3</strong></li>
+                          <li style="width:180px"><!-- replace hardcoded width with dynamic width to accomodate longest column name on report -->
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                None <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Destination</a></li>
+                                <li><a href="#">Expeditors Reference</a></li>
+                                <li><a href="#">Mode</a></li>
+                                <li><a href="#">Origin</a></li>
+                                <li><a href="#">Status</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">None</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="btn-group" role="group" aria-label="...">
+                              <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Ascending
+                              </button>
+                              <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Descending
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+
+                        <ul class="list-inline">
+                          <li><strong>4</strong></li>
+                          <li style="width:180px"><!-- replace hardcoded width with dynamic width to accomodate longest column name on report -->
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                None <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Destination</a></li>
+                                <li><a href="#">Expeditors Reference</a></li>
+                                <li><a href="#">Mode</a></li>
+                                <li><a href="#">Origin</a></li>
+                                <li><a href="#">Status</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">None</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="btn-group" role="group" aria-label="...">
+                              <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Ascending
+                              </button>
+                              <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Descending
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /sort order modal -->
+
                 <div class="panel-body">
                   <div class="fixed-button-width" id='right-defaults'>
                   <button class="btn btn-default btn-block" id="expeditors-reference-button"><span class="pull-left">Expeditors Reference</span> <span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true" id="remove"></span></button>
