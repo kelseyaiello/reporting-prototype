@@ -75,8 +75,20 @@ body {
   margin-bottom: 10px;
 }
 
+#customize-page-header {
+  padding-top: 0px;
+}
 
-.fixed-button-width {
-  width: 300px;
+#customized-report-label {
+  margin-left: 20px;
+}
+
+#schedule-label {
+  padding-top: 20px;
+}
+
+#button-group {
+  padding-top: 45px;
+  padding-right: 30px;
 }
 

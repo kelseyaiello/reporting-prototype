@@ -88,16 +88,16 @@
 
     <div class="row" id="customize-page-header">
       <div class="col-lg-4">
-        <h2>New Customized Report</h2>
-        <h4>Based on Shipments report</h4>
+        <h2 id="customized-report-label">New Customized Report</h2>
+        <h4 id="customized-report-label">Based on Shipments report</h4>
       </div>
 
       <div class="col-lg-4">
-        <h4>Schedule</h4>
+        <h4 id="schedule-label">Schedule</h4>
         <p>None. <a href="#">Add schedule</a>
       </div>
       
-      <div class="col-lg-4">
+      <div class="col-lg-4" id="button-group">
         <button type="button" id="button-1" class="btn btn-default pull-right">Cancel</button>
         <button type="button" id="button-1" class="btn btn-default pull-right">Save</button>
         <a class="btn btn-primary pull-right" id="button-1" href="run-results.html" role="button">Run</a>
@@ -142,18 +142,18 @@
                                   </div>
                                   <div id="collapseOne-sub" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-1">
                                     <div class="panel-body">
-                                      <div class="fixed-button-width" id='left-defaults'>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Actual Arrival Final Destination</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Actual Delivery</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Actual Departure</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Arrival Port</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Carrier Code</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Carrier Name</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Chargeable Weight</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Consignee Name</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Destination</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Expeditors Branch Destination</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Expeditors Branch Origin</span></button>
+                                      <div id='left-defaults'>
+                                        <button class="btn btn-default"><span class="pull-left">Actual Arrival Final Destination</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Actual Delivery</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Actual Departure</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Arrival Port</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Carrier Code</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Carrier Name</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Chargeable Weight</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Consignee Name</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Destination</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Expeditors Branch Destination</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Expeditors Branch Origin</span></button><br>
                                       </div>
                                     </div>
                                   </div>
@@ -171,17 +171,17 @@
                                   <div id="collapseTwo-sub" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne-1">
                                     <div class="panel-body">
                                       <div id='left-defaults'>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Actual Arrival Final Destination</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Actual Delivery</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Actual Departure</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Arrival Port</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Carrier Code</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Carrier Name</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Chargeable Weight</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Consignee Name</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Destination</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Expeditors Branch Destination</span></button>
-                                        <button class="btn btn-default btn-block"><span class="pull-left">Expeditors Branch Origin</span></button>
+                                        <button class="btn btn-default"><span class="pull-left">Actual Arrival Final Destination</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Actual Delivery</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Actual Departure</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Arrival Port</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Carrier Code</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Carrier Name</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Chargeable Weight</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Consignee Name</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Destination</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Expeditors Branch Destination</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Expeditors Branch Origin</span></button><br>
                                       </div>
                                     </div>
                                   </div>
@@ -465,14 +465,14 @@
                 <!-- /sort order modal -->
 
                 <div class="panel-body">
-                    <div id='right-defaults'>
+                    <span id='right-defaults'>
                     <button class="btn btn-default"><span class="pull-left">Expeditors Reference</span></button>
                     <button class="btn btn-default"><span class="pull-left">Origin</span></button>
                     <button class="btn btn-default"><span class="pull-left">Destination</span></button>
                     <button class="btn btn-default"><span class="pull-left">Status</span></button>
                     <button class="btn btn-default"><span class="pull-left">Primary Reference</span></button>
-                    </div>
-                    <div class="fixed-button-width" id="drop-here">Drop field here</div>
+                    </span>
+                  <span id="drop-here">Drop field here</span>
                 </div>
               </div>
             </div>
