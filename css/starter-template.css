@@ -92,3 +92,6 @@ body {
   padding-right: 30px;
 }
 
+.multi-select {
+  border-radius: 1px;
+}

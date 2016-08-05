@@ -1,9 +1,24 @@
 'use strict';
 
-document.getElementById("remove").addEventListener("click", function(){
-    document.getElementById("expeditors-reference-button").style.visibility = "hidden";
+ $(function(){
+
+    $("#dropdown-shipmentmilestone li a").click(function(){
+
+      $("#button-selectmilestone:first-child").text($(this).text());
+      $("#button-selectmilestone:first-child").val($(this).text());
+
+   });
+
 });
 
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
+  /*$(function(){
+
+    $("#dropdown-status li a").click(function(){
+
+      $("#button-status:first-child").text($(this).text());
+      $("#button-status:first-child").val($(this).text());
+
+   });
+
+});
+
