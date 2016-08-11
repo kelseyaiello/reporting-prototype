@@ -105,11 +105,8 @@
                     </span>
                   </span>
 
-                  <span class="default-filter">
-                    <p>Status</p>
-                    <span class="input-group">
-                    <input type="text" class="form-control" placeholder="In Transit" aria-describedby="basic-addon1">
-                    </span>
+                  <span class="default-filter" id="status-image">
+                    <img src="images/intransit-selected.png" alt=" ">
                   </span>
 
                     <span class="default-filter" id="shipment-milestone-filter">
@@ -136,11 +133,17 @@
                       </span>
 
                   <span class="default-filter">
-                    <p>Mode</p>
-                    <span class="input-group">
-                    <input type="text" class="form-control" placeholder="Choose modes" aria-describedby="basic-addon1">
+                      <p>Mode</p>
+                      <select multiple>
+                        <option value="air">Air</option>
+                        <option value="ocean">Ocean</option>
+                        <option value="transcon">Transcon</option>
+                        <option value="rail">Rail</option>
+                        <option value="sea-air">Sea/Air</option>
+                        <option value="hub-transshipment">Hub; Trans-shipment</option>
+                        <option value="not-defined">Not Defined</option>
+                      </select>
                     </span>
-                  </span>
 
                 </div> <!-- end of filters panel body -->
 

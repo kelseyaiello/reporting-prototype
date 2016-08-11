@@ -35,6 +35,10 @@ body {
   margin: 0.5em;
 }
 
+#selected-image {
+  float: none;
+}
+
 #headingOne-1 {
   background-color: white;
   text-decoration: underline;

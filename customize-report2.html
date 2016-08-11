@@ -66,24 +66,24 @@
           <a class="navbar-brand" href="index.html">exp.o Visibility</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-        	<!--
+          <!--
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          	-->
+            -->
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container-fluid starter-template">
 
-	<ol class="breadcrumb">
-  		<li><a href="index.html">Home</a></li>
-  		<li><a href="manage-reports.html">Manage Reports</a></li>
+  <ol class="breadcrumb">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="manage-reports.html">Manage Reports</a></li>
       <li class="active">New Customized Report</li>
-	</ol> 
+  </ol> 
 
 
     <div class="row" id="customize-page-header">
@@ -94,7 +94,25 @@
 
       <div class="col-lg-4">
         <h4 id="schedule-label">Schedule</h4>
-        <p>None. <a href="#">Add schedule</a>
+        <p>None. <a href="#schedule-modal" data-toggle="modal">Add schedule</a>
+
+          <div class="modal fade" id="schedule-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">Add Schedule</h4>
+                </div>
+                <div class="modal-body">
+                  <img src="images/schedule-img.png" height="325px" alt=" ">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
       </div>
       
       <div class="col-lg-4" id="button-group">
@@ -136,24 +154,15 @@
                                   <div class="panel-heading" role="tab" id="headingOne-1">
                                     <h4 class="panel-title">
                                       <a role="button" data-toggle="collapse" data-parent="#accordion-sub" href="#collapseOne-sub" aria-expanded="true" aria-controls="collapseOne-sub">
-                                        Sub Category #1
+                                        Carrier
                                       </a>
                                     </h4>
                                   </div>
                                   <div id="collapseOne-sub" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-1">
                                     <div class="panel-body">
-                                      <div id='left-defaults'>
-                                        <button class="btn btn-default"><span class="pull-left">Actual Arrival Final Destination</span></button><br>
-                                        <button class="btn btn-default"><span class="pull-left">Actual Delivery</span></button><br>
-                                        <button class="btn btn-default"><span class="pull-left">Actual Departure</span></button><br>
-                                        <button class="btn btn-default"><span class="pull-left">Arrival Port</span></button><br>
+                                      <div>
                                         <button class="btn btn-default"><span class="pull-left">Carrier Code</span></button><br>
                                         <button class="btn btn-default"><span class="pull-left">Carrier Name</span></button><br>
-                                        <button class="btn btn-default"><span class="pull-left">Chargeable Weight</span></button><br>
-                                        <button class="btn btn-default"><span class="pull-left">Consignee Name</span></button><br>
-                                        <button class="btn btn-default"><span class="pull-left">Destination</span></button><br>
-                                        <button class="btn btn-default"><span class="pull-left">Expeditors Branch Destination</span></button><br>
-                                        <button class="btn btn-default"><span class="pull-left">Expeditors Branch Origin</span></button><br>
                                       </div>
                                     </div>
                                   </div>
@@ -164,28 +173,124 @@
                                   <div class="panel-heading" role="tab" id="headingOne-1">
                                     <h4 class="panel-title">
                                       <a role="button" data-toggle="collapse" data-parent="#accordion-sub" href="#collapseTwo-sub" aria-expanded="true" aria-controls="collapseTwo-sub">
-                                        Sub Category #2
+                                        Consignee
                                       </a>
                                     </h4>
                                   </div>
                                   <div id="collapseTwo-sub" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne-1">
                                     <div class="panel-body">
                                       <div id='left-defaults'>
+                                        <button class="btn btn-default"><span class="pull-left">Consignee Name</span></button><br>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div><!--end of second sub category-->
+
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="headingOne-1">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#accordion-sub" href="#collapseThree-sub" aria-expanded="true" aria-controls="collapseThree-sub">
+                                        Dates
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseThree-sub" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne-1">
+                                    <div class="panel-body">
+                                      <div id='left-defaults'>
                                         <button class="btn btn-default"><span class="pull-left">Actual Arrival Final Destination</span></button><br>
                                         <button class="btn btn-default"><span class="pull-left">Actual Delivery</span></button><br>
                                         <button class="btn btn-default"><span class="pull-left">Actual Departure</span></button><br>
-                                        <button class="btn btn-default"><span class="pull-left">Arrival Port</span></button><br>
-                                        <button class="btn btn-default"><span class="pull-left">Carrier Code</span></button><br>
-                                        <button class="btn btn-default"><span class="pull-left">Carrier Name</span></button><br>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="headingOne-1">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#accordion-sub" href="#collapseFour-sub" aria-expanded="true" aria-controls="collapseFour-sub">
+                                        Freight
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseFour-sub" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne-1">
+                                    <div class="panel-body">
+                                      <div id='left-defaults'>
                                         <button class="btn btn-default"><span class="pull-left">Chargeable Weight</span></button><br>
-                                        <button class="btn btn-default"><span class="pull-left">Consignee Name</span></button><br>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="headingOne-1">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#accordion-sub" href="#collapseFive-sub" aria-expanded="true" aria-controls="collapseFive-sub">
+                                        Ports
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseFive-sub" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne-1">
+                                    <div class="panel-body">
+                                      <div id='left-defaults'>
+                                        <button class="btn btn-default"><span class="pull-left">Arrival Port</span></button><br>
                                         <button class="btn btn-default"><span class="pull-left">Destination</span></button><br>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="headingOne-1">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#accordion-sub" href="#collapseSix-sub" aria-expanded="true" aria-controls="collapseSix-sub">
+                                        References
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseSix-sub" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne-1">
+                                    <div class="panel-body">
+                                        <button class="btn btn-default"><span class="pull-left">Expeditors Reference</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Primary Reference</span></button><br>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="headingOne-1">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#accordion-sub" href="#collapseSeven-sub" aria-expanded="true" aria-controls="collapseSeven-sub">
+                                        Services
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseSeven-sub" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne-1">
+                                    <div class="panel-body">
+                                      <div id='left-defaults'>
                                         <button class="btn btn-default"><span class="pull-left">Expeditors Branch Destination</span></button><br>
                                         <button class="btn btn-default"><span class="pull-left">Expeditors Branch Origin</span></button><br>
                                       </div>
                                     </div>
                                   </div>
-                                </div><!--end of second sub category-->
+                                </div>
+
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="headingOne-1">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#accordion-sub" href="#collapseEight-sub" aria-expanded="true" aria-controls="collapseEight-sub">
+                                        Shipper
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseEight-sub" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne-1">
+                                    <div class="panel-body">
+                                      <div id='left-defaults'>
+                                        <button class="btn btn-default"><span class="pull-left">Expeditors Branch Destination</span></button><br>
+                                        <button class="btn btn-default"><span class="pull-left">Expeditors Branch Origin</span></button><br>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
 
                             </div>
                           </div>
@@ -254,7 +359,7 @@
                     <div class="default-filter">
                       <p>Origin</p>
                       <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Shanghai, China (SHA)" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="China" aria-describedby="basic-addon1">
                       </div>
                     </div>
 
@@ -262,7 +367,7 @@
                     <div class="default-filter">
                       <p>Destination</p>
                       <div class="input-group">
-                      <input type="text" class="form-control" placeholder="New York, US (JFK)" aria-describedby="basic-addon1">
+                      <input type="text" class="form-control" placeholder="New York, NY (JFK)" aria-describedby="basic-addon1">
                       </div>
                     </div>
 
@@ -274,28 +379,25 @@
                     </div>
 
                     <div class="default-filter">
-                      <p>Status</p>
-                      <div class="input-group">
-                      <input type="text" class="form-control" placeholder="In Transit" aria-describedby="basic-addon1">
-                      </div>
+                      <div><img src="images/intransit-selected.png" alt=" " id="selected-image"></div>
                     </div>
 
                     <div class="default-filter" id="shipment-milestone-filter">
                       <p>Shipment milestone</p>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="button-selectmilestone">
                           Select milestone <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" id="dropdown-shipmentmilestone">
                           <li><a href="#">Action</a></li>
                           <li><a href="#">Another action</a></li>
                           <li><a href="#">Something else here</a></li>
                         </ul>
                         <br>
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="button-selectdate">
                           Select date <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" id="dropdown-shipmentmilestone2">
                           <li><a href="#">Action</a></li>
                           <li><a href="#">Another action</a></li>
                           <li><a href="#">Something else here</a></li>
@@ -303,12 +405,10 @@
                       </div>
                     </div>
 
-                    <div class="default-filter">
-                      <p>Mode</p>
-                      <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Ocean" aria-describedby="basic-addon1">
-                      </div>
-                    </div>
+                    <span class="default-filter" id="selected-image">
+                      <img src="images/ocean-selected.png" alt=" ">
+                    </span>
+
                 </div> <!-- end of filters panel body -->
 
               </div>
