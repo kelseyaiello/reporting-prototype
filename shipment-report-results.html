@@ -60,244 +60,244 @@
 
     <div class="container-fluid starter-template">
 
-    <ol class="breadcrumb">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="manage-reports.html">Manage Reports</a></li>
-        <li class="active">Run</li>
-    </ol>  
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="active">Run Report</li>
+        </ol>  
 
+        <!--report options-->
+        <div class="pull-right">
+          <a class="btn btn-primary" href="shipment-report-results2.html" role="button">Run</a>
+          <a class="btn btn-default" href="customize-report3.html" role="button">Customize</a>
+          <button type="button" class="btn btn-default">Save</button>
+          <button type="button" class="btn btn-default">Cancel</button>
+        </div>
+        <!--/report options-->
 
+        <h2 class="clearfix">Shipments</h2>
 
-        <button type="button" id="button-1" class="btn btn-default pull-right">Cancel</button>
-        <button type="button" id="button-1" class="btn btn-default pull-right">Save</button>
-        <a class="btn btn-default pull-right" id="button-1" href="customize-report3.html" role="button">Customize</a>
-        <a class="btn btn-primary pull-right" id="button-1" href="shipment-report-results2.html" role="button">Run</a>
+       <!--filters panel-->
+      <form>
+      <div class="panel panel-default">
+            
+        <div class="panel-body">
 
-        <h2>Shipments</h2>
-        
-    </div>
-    
-          <!--filters panel-->
-            <div class="container-fluid choosen-filters">
-              <div class="panel panel-default panel-dark">
+          <div class="default-filter form-group">
+            <label>Origin</label><br />
+            <button type="button" class="btn btn-default">Shanghai, China (SHA)</button>
+          </div>
 
-                    
-                <div class="panel-body">
-                  <span class="default-filter">
-                    <p>Origin</p>
-                    <span class="input-group">
-                    <input type="text" class="form-control" placeholder="Shanghai, China (SHA)" aria-describedby="basic-addon1">
-                    </span>
-                  </span>
+          <div class="default-filter form-group">
+            <label>Destination</label><br />
+            <button type="button" class="btn btn-default">New York, NY (NYC)</button>
+          </div>
 
+          <div class="default-filter form-group">
+            <label>Expeditors Reference</label>
+            <input type="text" class="form-control" placeholder="Enter references" aria-describedby="basic-addon1">
+          </div>
 
-                  <span class="default-filter">
-                    <p>Destination</p>
-                    <span class="input-group">
-                    <input type="text" class="form-control" placeholder="New York, NY (JFK)" aria-describedby="basic-addon1">
-                    </span>
-                  </span>
+          <div class="default-filter form-group">
+            <label>Status</label><br />
+            <button type="button" class="btn btn-default">In Transit</button>
+          </div>
 
-                  <span class="default-filter">
-                    <p>Expeditors Reference</p>
-                    <span class="input-group">
-                    <input type="text" class="form-control" placeholder="Enter references" aria-describedby="basic-addon1">
-                    </span>
-                  </span>
+          <div class="default-filter form-group">
+              <div class="btn-group"> 
+              <label>Milestone</label><br />
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="">
+                  Select milestone <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Estimated Time of Departure</a></li>
+                  <li><a href="#">Actual Departure</a></li>
+                  <li><a href="#">Estimated Arrival Final Destination</a></li>
+                  <li><a href="#">Actual Arrival Final Destination</a></li>
+                  <li><a href="#">Estimated Delivery</a></li>
+                  <li><a href="#">Actual Delivery</a></li>
+                </ul>
+                </div>
 
-                  <span class="default-filter" id="status-image">
-                    <img src="images/intransit-selected.png" alt=" ">
-                  </span>
-
-                    <span class="default-filter" id="shipment-milestone-filter">
-                        <p>Shipment milestone</p>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Select milestone <span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                          </ul>
-                          <br>
-                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Select date <span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                          </ul>
-                        </div>
-                      </span>
-
-                  <span class="default-filter">
-                      <p>Mode</p>
-                      <select multiple>
-                        <option value="air">Air</option>
-                        <option value="ocean">Ocean</option>
-                        <option value="transcon">Transcon</option>
-                        <option value="rail">Rail</option>
-                        <option value="sea-air">Sea/Air</option>
-                        <option value="hub-transshipment">Hub; Trans-shipment</option>
-                        <option value="not-defined">Not Defined</option>
-                      </select>
-                    </span>
-
-                </div> <!-- end of filters panel body -->
-
+                <div class="btn-group">
+                <label>&nbsp;</label><br />
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select date <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">action</a></li>
+                  <li><a href="#">action</a></li>
+                  <li><a href="#">action</a></li>
+                
+                </ul>
               </div>
-        
-    <div class="results-buttons pull-right">
-        <div class="btn-group">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Export <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">XLS</a></li>
-            <li><a href="#">CSV</a></li>
-            <li><a href="#">PDF</a></li>
-          </ul>
-        </div>
-        <div class="btn-group">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Save <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div>
-        <button type="button" id="button-1" class="btn btn-default">Share</button>
-    </div>
-    <p>Date as of: 07-Jul-2016 03:12 PM | Found: 15</p>
+            </div>
 
-<table class="table table-hover table-background"> 
-            <thead> 
-                <tr>
-                    <th>Origin</th> 
-                    <th>Destination</th>
-                    <th>Expeditors reference</th> 
-                    <th>Status</th>
-                    <th>Primary Reference</th>
+            <div class="default-filter form-group">
+              <label>Mode</label><br />
+              <button type="button" class="btn btn-default">Choose modes</button>
+            </div>
 
-                </tr>
-            </thead> 
-            <tbody> 
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-                    
-              </tr> 
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-                </tr>
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-              </tr> 
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-                </tr> 
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-              </tr> 
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-                </tr> 
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-              </tr> 
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-                </tr>
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-              </tr> 
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-                </tr> 
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-              </tr> 
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-                </tr>
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-                </tr> 
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-              </tr> 
-                <tr> 
-                    <td>Shanghai, China (SHA)</td>
-                    <td>New York, NY (JFK)</td>
-                    <td>1234567890</td>
-                    <td>In Transit</td>
-                    <td>987654321</td>
-                </tr>   
-            </tbody> 
-        </table>
- 
-</div>
+          </div> <!-- end of filters panel body -->
+
+      </div>
+      </form>
+      <!--/filters panel-->
+         
+
+
+        <!--result options-->
+        <div class="pull-right">
+          <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Export <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">XLS</a></li>
+                <li><a href="#">CSV</a></li>
+                <li><a href="#">PDF</a></li>
+              </ul>
+            </div>
+          <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Save <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">XLS</a></li>
+                <li><a href="#">CSV</a></li>
+                <li><a href="#">PDF</a></li>
+              </ul>
+            </div>
+          <button type="button" class="btn btn-default">Share</button>
+        </div>
+        <!--/result options-->
+
+        <p class="clearfix">Date as of: 07-Jul-2016 03:12 PM | Found: 15</p>
+
+        <!--results-->
+        <div class="panel panel-default">
+
+            <table class="table table-hover table-background"> 
+                <thead> 
+                    <tr>
+                        <th>Origin</th> 
+                        <th>Destination</th>
+                        <th>Expeditors reference</th> 
+                        <th>Status</th>
+                        <th>Primary Reference</th>
+
+                    </tr>
+                </thead> 
+                <tbody> 
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                        
+                  </tr> 
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                    </tr>
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                  </tr> 
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                    </tr> 
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                  </tr> 
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                    </tr> 
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                  </tr> 
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                    </tr>
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                  </tr> 
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                    </tr> 
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                  </tr> 
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                    </tr>
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                    </tr> 
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                  </tr> 
+                    <tr> 
+                        <td>Shanghai, China (SHA)</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>1234567890</td>
+                        <td>In Transit</td>
+                        <td>987654321</td>
+                    </tr>   
+                </tbody> 
+            </table>
+        </div>
+        <!--/results-->
 
      
         

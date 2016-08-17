@@ -16,10 +16,6 @@ body {
   border-color: #ddd;
 }
 
-#button-1 {
-	margin: 2px; 
-}
-
 #drop-here {
 	height:37px;
 	padding:6px;
@@ -31,8 +27,9 @@ body {
 }
 
 .default-filter {
-  display: inline-table;
-  margin: 0.5em;
+  display: inline-block;
+  vertical-align:top;
+  margin: 2px;
 }
 
 #selected-image {
