@@ -96,3 +96,10 @@ body {
 .multi-select {
   border-radius: 1px;
 }
+
+.hide-arrow::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+
+
