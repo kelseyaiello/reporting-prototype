@@ -11,6 +11,8 @@
 
     <title>Run | exp.o Visibility</title>
 
+    
+
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -22,6 +24,13 @@
 
     <link href='dist/dragula.css' rel='stylesheet' type='text/css' />
 
+    <!--autocomplete-->
+    <link rel="stylesheet" href="css/awesomplete.css" />
+    <script src="js/awesomplete.js" async></script>
+    <!--/autocomplete-->
+
+
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
@@ -32,10 +41,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!--autocomplete-->
-  <link rel="stylesheet" href="css/awesomplete.css" />
-  <script src="js/awesomplete.js" async></script>
-    <!--/autocomplete-->
+
 
 
 
@@ -172,8 +178,16 @@
 
           <div class="default-filter form-group">
             <label>Status</label><br />
-            <button type="button" class="btn btn-default">Choose status</button>
+            <select name="skills" multiple="" class="ui fluid dropdown">
+              <option value="">Skills</option>
+              <option value="angular">Angular</option>
+              <option value="css">CSS</option>
+              <option value="design">Graphic Design</option>
+            </select>
+
           </div>
+
+        
 
           <div class="default-filter form-group">
               <div class="btn-group"> 
