@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Run | exp.o Visibility</title>
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+
+    
+
+
+
+
+ 
+
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">exp.o Visibility</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <!--
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+            -->
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container-fluid starter-template">
+
+      <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li class="active">Run Report</li>
+      </ol>  
+
+      <!--report options-->
+      <div class="pull-right">
+        <a class="btn btn-primary" href="shipment-report-results.html" role="button">Run</a>
+        <button type="button" class="btn btn-default">Customize</button>
+        <button type="button" class="btn btn-default">Save</button>
+        <button type="button" class="btn btn-default">Cancel</button>
+      </div>
+      <!--/report options-->    
+
+      <h2>Shipments</h2>
+
+      <!--filters panel-->
+      <form>
+      <div class="panel panel-default">
+            
+        <div class="panel-body">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css"
+        rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <link href="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css"
+        rel="stylesheet" type="text/css" />
+    <script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js"
+        type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#lstFruits').multiselect({
+                includeSelectAllOption: true
+            });
+            $('#btnSelected').click(function () {
+                var selected = $("#lstFruits option:selected");
+                var message = "";
+                selected.each(function () {
+                    message += $(this).text() + " " + $(this).val() + "\n";
+                });
+                alert(message);
+            });
+        });
+    </script>
+    <select id="lstFruits" multiple="multiple">
+        <option value="1">Mango</option>
+        <option value="2">Apple</option>
+        <option value="3">Banana</option>
+        <option value="4">Guava</option>
+        <option value="5">Orange</option>
+    </select>
+    <input type="button" id="btnSelected" value="Get Selected" />
+
+
+          <div class="default-filter form-group">
+            <label>Origin</label><br />
+            <input list="originList" class="form-control hide-arrow awesomplete" placeholder="Enter origins" aria-describedby="basic-addon1" data-multiple />
+            <datalist id="originList">
+              <option>Nanshan (1VS)</option>
+              <option>Jenkins Township, Pa (1WB)</option>
+              <option>Niggatahigashi (NIH)</option>
+              <option>Hershey, PA (YQ3)</option>
+              <option>Parrish, FL (U89)</option>
+              <option>Shenyang, China (SHE)</option>
+              <option>Moscow-Sheremetye, Russia (SVO)</option>
+              <option>Ashkhabad, Turkmenistan (ASB)</option>
+              <option>Shantou, China (SWA)</option>
+              <option>Bishkek, Kyrgyzstan (FRU)</option>
+              <option>Oshawa (430) (2CB)</option>
+              <option>Dulles, Washington Dc (IAD)</option>
+              <option>Washington, WV (WSH)</option>
+              <option>Nansha, China (NNS)</option>
+              <option>Sheboygan, WI (SBM)</option>
+              <option>Shanghai, China (SHA)</option>
+              <option>Sharjah, UAE (SHJ)</option>
+              <option>Marshal, TX (ASL)</option>
+              <option>Kenosha, WI (KNA)</option>
+              <option>Chittagong, Bangladesh (CGP)</option>
+              <option>Changsha, China (CSX)</option>
+              <option>Washington Nat'L, DC (DCA)</option>
+              <option>Shelby, NC (XU6)</option>
+              <option>Cash, AR (RZ4)</option>
+              <option>Hildesheim (ZNO)</option>
+              <option>Hiroshima, Japan (HIJ)</option>
+              <option>Dhaka, Bangladesh (DAC)</option>
+              <option>Shenzhen, China (SZX)</option>
+              <option>Shimizu, Japan (MZU)</option>
+              <option>China</option>
+            </datalist>
+          </div>
+
+          <div class="default-filter form-group">
+            <label>Destination</label><br />
+            <input list="destList" class="form-control hide-arrow awesomplete" placeholder="Enter destinations  " aria-describedby="basic-addon1" data-multiple />
+            <datalist id="destList">
+              <option>New Glasgow (2BU)</option>
+              <option>Newmarket (2BV)</option>
+              <option>New York, NY (NYC)</option>
+              <option>Sydney, New South Wales (SYD)</option>
+              <option>New Castle, TN (3BA)</option>
+              <option>New Orleans, LA (MSY)</option>
+              <option>Nassau, New Providence Island, Bahamas (NAS)</option>
+              <option>New Berlin, WI (NBL)</option>
+              <option>Newport, TN (NPT)</option>
+              <option>Saint John, New Brunswick (YSJ)</option>
+              <option>Newark, NJ (EWR)</option>
+              <option>New York, NY (JFK)</option>
+              <option>Wellington, New Zealand (WLG)</option>
+              <option>Napier, New Zealand (NPE)</option>
+              <option>New Plymouth, New Zealand (NPL)</option>
+              <option>Kieta, Papua New Guinea (KIE)</option>
+              <option>Lae, Papua New Guinea (LAE)</option>
+              <option>Bosset, Papua New Guinea (BSV)</option>
+              <option>Port Moresby, Papua New Guinea (POM)</option>
+              <option>Palmerston North, New Zealand (PMR)</option>
+              <option>Nelson, New Zealand (NSN)</option>
+              <option>New Century, KS (NC3)</option>
+              <option>Gasuke, Papua New Guinea (GBC)</option>
+              <option>Greymouth, New Zealand (GMN)</option>
+              <option>Mount Hagen, Papua New Guinea (HGU)</option>
+              <option>Newark, CA (EW3)</option>
+              <option>New Delhi, India (ND1)</option>
+              <option>Newton, PA (NW9)</option>
+              <option>Albany, New Zealand (AB9)</option>
+              <option>Newport, RI (NP6)</option>
+            </datalist>
+          </div>
+
+          <div class="default-filter form-group">
+            <label>Expeditors Reference</label>
+            <input type="text" class="form-control" placeholder="Enter references" aria-describedby="basic-addon1">
+          </div>
+
+
+            
+
+
+          <div class="default-filter">
+            <label>Status</label><br />
+
+              
+
+          </div>
+
+<!--
+            <select name="">
+              <option value="not-onhand">Not onhand</option>
+              <option value="onhand">Onhand</option>
+              <option value="pending-export">Pending export</option>
+              <option value="intransit">In transit</option>
+              <option value="arrived">Arrived, not released</option>
+              <option value="released">Released</option>
+              <option value="pending-delivery">Pending delivery</option>
+              <option value="delivery">Delivery (completed)</option>
+            </select>
+
+          </div>
+-->
+        
+
+          <div class="default-filter form-group">
+              <div class="btn-group"> 
+              <label>Milestone</label><br />
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="">
+                  Select milestone <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Estimated Time of Departure</a></li>
+                  <li><a href="#">Actual Departure</a></li>
+                  <li><a href="#">Estimated Arrival Final Destination</a></li>
+                  <li><a href="#">Actual Arrival Final Destination</a></li>
+                  <li><a href="#">Estimated Delivery</a></li>
+                  <li><a href="#">Actual Delivery</a></li>
+                </ul>
+                </div>
+
+                <div class="btn-group">
+                <label>&nbsp;</label><br />
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select date <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">action</a></li>
+                  <li><a href="#">action</a></li>
+                  <li><a href="#">action</a></li>
+                
+                </ul>
+              </div>
+            </div>
+
+            <div class="default-filter form-group">
+              <label>Mode</label><br />
+              <button type="button" class="btn btn-default">Choose modes</button>
+            </div>
+
+            
+
+
+
+          </div> <!-- end of filters panel body -->
+
+      </div>
+      </form>
+      <!--/filters panel-->
+     
+
+    </div><!-- /.container -->
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src='dist/dragula.js'></script>
+    <script src='example/example.min.js'></script>
+
+
+    
+  </body>
+</html>
