@@ -2,12 +2,37 @@ body {
   padding-top: 80px;
 }
 
-.row {
-  padding-top: 20px;
+.padding {
+  margin-top: 15px;
 }
 
-#accordion {
-  padding-top: 20px;
+.panel-body > .field > div {
+  color: #333;
+  background-color: #fff;
+  width: 100%;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin:5px 0;
+}
+
+.panel-body > .column > div {
+  color: #333;
+  background-color: #fff;
+  max-width: 200px;
+  display: inline-block;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin:0 5px;
 }
 
 .panel-dark > .panel-heading {
@@ -16,7 +41,13 @@ body {
   border-color: #ddd;
 }
 
-#drop-here {
+.panel-dark > .panel-heading {
+  color: #333;
+  background-color: #ddd;
+  border-color: #ddd;
+}
+
+.drop-here {
 	height:37px;
 	padding:6px;
 	border:2px dotted #aaaaaa;
@@ -36,21 +67,9 @@ body {
   float: none;
 }
 
-#headingOne-1 {
-  background-color: white;
-  text-decoration: underline;
-  border: 0;
-}
-
-#accordion-sub {
-  padding: 0px;
-}
-
 .table-background {
   background-color: #fff;
 }
-
-
 
 .hide-icon{ 
 	opacity: 0;
@@ -76,16 +95,8 @@ body {
   margin-bottom: 10px;
 }
 
-#customize-page-header {
-  padding-top: 0px;
-}
-
-#customized-report-label {
+.customized-report-label {
   margin-left: 20px;
-}
-
-#schedule-label {
-  padding-top: 20px;
 }
 
 #button-group {
