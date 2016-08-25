@@ -25,10 +25,6 @@
     <link rel="stylesheet" href="css/awesomplete.css" />
     
 
-        <script type="text/javascript" src="http://www.daterangepicker.com/moment.min.js"></script>
-        <script type="text/javascript" src="http://www.daterangepicker.com/daterangepicker.js"></script>
-        <script src="http://www.daterangepicker.com/website.js"></script>
-
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
@@ -91,16 +87,37 @@
           <!--report options-->
           <div class="pull-right">
             <a class="btn btn-primary" href="shipment-report-results4.html" role="button">Run</a>
-            <button type="button" class="btn btn-default">Customize</button>
-            <button type="button" class="btn btn-default">Save</button>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#saveModal">Save</button>
             <button type="button" class="btn btn-default">Cancel</button>
           </div><!--/report options-->
         </div>
 
       </div>
 
-        
-      
+      <!-- save report modal -->
+      <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Save Report</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputName">Report name</label>
+                  <input type="email" class="form-control" id="exampleInputName" placeholder="">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <a class="btn btn-primary" href="customize-report6.html" role="button">Save report</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- /save report modal -->
+
           <div class="modal fade" id="schedule-modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -119,7 +136,6 @@
             </div><!-- /.modal-dialog -->
           </div><!-- /.modal -->
        
-    
     
     <!--fields-filters-cols-row-->
     <div class="row">
@@ -182,7 +198,7 @@
                                 </div>
                                 <div id="subCollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="subHeadingTwo">
                                   <div class="panel-body">
-                                    <div id="left-copy-1tomany" class="dragula-container field">
+                                    <div class="dragula-container field">
                                       <div>Consignee name</div>
                                     </div>
                                   </div>
@@ -199,11 +215,18 @@
                                 </h4>
                                 </div>
                                 <div id="subCollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="subHeadingThree">
-                                  <ul class="list-group">
-                                    <li class="list-group-item">Actual arrival final destination</li>
-                                    <li class="list-group-item">Actual delivery</li>
-                                    <li class="list-group-item">Actual departure</li>
-                                  </ul>
+                                  <div class="panel-body">
+                                    <div id="left-copy-1tomany" class="dragula-container field">
+                                      <div>Actual arrival final destination</div>
+                                      <div>Actual delivery</div>
+                                      <div>Actual departure</div>
+                                      <div>Estimated arrival final destination</div>
+                                      <div>Estimated arrival unlading port</div>
+                                      <div>Estimated delivery</div>
+                                      <div>Estimated time of departure</div>
+                                      <div>Requested delivery</div>
+                                    </div>
+                                  </div>
                                 </div>
                              </div><!--/subcategory 3-->
 
@@ -484,12 +507,6 @@
                     </div>
 
 
-                    <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
-                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
-                                        <span></span> <b class="caret"></b>
-                                    </div>
-
-
                     <div class="btn-group">
                     <label>&nbsp;</label><br />
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -515,6 +532,11 @@
                   <option value="6">Hub; Trans-shipment</option>
                   <option value="7">Not defined</option>
                 </select>
+              </div>
+
+              <div class="default-filter">
+                <label></label><br />
+                <span class="drop-here">Drop field here</span>
               </div>
 
             </div> <!-- /filters panel body -->
@@ -675,11 +697,11 @@
                   
                 <div id="right-copy-1tomany" class="dragula-container column">
                   <div>Origin</div>
-                  <div>Consignee name</div>
                   <div>Status</div>
                   <div>Destination</div>
                   <div>Expeditors Reference</div>
                   <div>Primary Reference</div>
+                  <div>Consignee name</div>
                   <span class="drop-here">Drop field here</span>
                 </div>
 
@@ -770,33 +792,7 @@
         <!--daterangepicker-->
         
 
-        <script type="text/javascript">
-          $(function() {
-
-              var start = moment().subtract(29, 'days');
-              var end = moment();
-
-              function cb(start, end) {
-                  $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-              }
-
-              $('#reportrange').daterangepicker({
-                  startDate: start,
-                  endDate: end,
-                  ranges: {
-                     'Today': [moment(), moment()],
-                     'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                     'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                     'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                     'This Month': [moment().startOf('month'), moment().endOf('month')],
-                     'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                  }
-              }, cb);
-
-              cb(start, end);
-              
-          });
-        </script>
+        
         <!--/daterangepicker-->
 
   <!--/scripts for this page-->

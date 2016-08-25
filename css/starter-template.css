@@ -23,7 +23,7 @@ body {
 .panel-body > .column > div {
   color: #333;
   background-color: #fff;
-  max-width: 200px;
+  max-width: 235px;
   display: inline-block;
   padding: 6px 12px;
   line-height: 1.42857143;
@@ -32,7 +32,7 @@ body {
   vertical-align: middle;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin:0 5px;
+  margin:5px 5px;
 }
 
 .panel-dark > .panel-heading {
