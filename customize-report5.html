@@ -23,6 +23,11 @@
     <link href="example/example.css" rel="stylesheet" type="text/css" />
     <link href="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/awesomplete.css" />
+    
+
+        <script type="text/javascript" src="http://www.daterangepicker.com/moment.min.js"></script>
+        <script type="text/javascript" src="http://www.daterangepicker.com/daterangepicker.js"></script>
+        <script src="http://www.daterangepicker.com/website.js"></script>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -85,7 +90,7 @@
         <div class="col-lg-6"">
           <!--report options-->
           <div class="pull-right">
-            <a class="btn btn-primary" href="shipment-report-results3.html" role="button">Run</a>
+            <a class="btn btn-primary" href="shipment-report-results4.html" role="button">Run</a>
             <button type="button" class="btn btn-default">Customize</button>
             <button type="button" class="btn btn-default">Save</button>
             <button type="button" class="btn btn-default">Cancel</button>
@@ -478,6 +483,13 @@
                     </ul>
                     </div>
 
+
+                    <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                                        <span></span> <b class="caret"></b>
+                                    </div>
+
+
                     <div class="btn-group">
                     <label>&nbsp;</label><br />
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -659,15 +671,14 @@
               </div>
             </div><!-- /sort order modal -->
             
-            
-            
               <div class="panel-body">
                   
                 <div id="right-copy-1tomany" class="dragula-container column">
-                  <div>Expeditors Reference</div>
                   <div>Origin</div>
-                  <div>Destination</div>
+                  <div>Consignee name</div>
                   <div>Status</div>
+                  <div>Destination</div>
+                  <div>Expeditors Reference</div>
                   <div>Primary Reference</div>
                   <span class="drop-here">Drop field here</span>
                 </div>
@@ -688,14 +699,15 @@
 
     <!--scripts for this page--> 
 
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
       <!--dragula-->
       <script src="dist/dragula.js"></script>
       <script src="example/example.min.js"></script><!--/dragula-->
 
       <!--multiselect-->
       <script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js" type="text/javascript"></script>
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>    
       <script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js" type="text/javascript"></script>
       <script type="text/javascript">
           $(function () {
@@ -754,6 +766,38 @@
 
           });
         </script><!--/milestone dropdown-->
+
+        <!--daterangepicker-->
+        
+
+        <script type="text/javascript">
+          $(function() {
+
+              var start = moment().subtract(29, 'days');
+              var end = moment();
+
+              function cb(start, end) {
+                  $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+              }
+
+              $('#reportrange').daterangepicker({
+                  startDate: start,
+                  endDate: end,
+                  ranges: {
+                     'Today': [moment(), moment()],
+                     'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                     'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                     'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                     'This Month': [moment().startOf('month'), moment().endOf('month')],
+                     'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                  }
+              }, cb);
+
+              cb(start, end);
+              
+          });
+        </script>
+        <!--/daterangepicker-->
 
   <!--/scripts for this page-->
     
