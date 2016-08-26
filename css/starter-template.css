@@ -60,7 +60,7 @@ body {
 .default-filter {
   display: inline-block;
   vertical-align:top;
-  margin: 2px;
+  margin: 0 2px 15px 2px;
 }
 
 #selected-image {
