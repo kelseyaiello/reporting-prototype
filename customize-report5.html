@@ -91,36 +91,12 @@
           <!--report options-->
           <div class="pull-right">
             <a class="btn btn-primary" href="shipment-report-results4.html" role="button">Run</a>
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#saveModal">Save</button>
+            <button type="button" class="btn btn-default">Save</button>
             <button type="button" class="btn btn-default">Cancel</button>
           </div><!--/report options-->
         </div>
 
       </div>
-
-      <!-- save report modal -->
-      <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Save Report</h4>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="form-group">
-                  <label for="exampleInputName">Report name</label>
-                  <input type="email" class="form-control" id="exampleInputName" placeholder="">
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-              <a class="btn btn-primary" href="customize-report6.html" role="button">Save report</a>
-            </div>
-          </div>
-        </div>
-      </div><!-- /save report modal -->
 
           <div class="modal fade" id="schedule-modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -398,32 +374,6 @@
 
             <!-- filters panel body -->
             <div class="panel-body">
-
-              <div class="default-filter form-group">
-                <div class="btn-group"> 
-                <label>Milestone</label><br />
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="">
-                    <span class="selection">None selected</span> <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Estimated Time of Departure</a></li>
-                    <li><a href="#">Actual Departure</a></li>
-                    <li><a href="#">Estimated Arrival Final Destination</a></li>
-                    <li><a href="#">Actual Arrival Final Destination</a></li>
-                    <li><a href="#">Estimated Delivery</a></li>
-                    <li><a href="#">Actual Delivery</a></li>
-                  </ul>
-                </div>
-              </div>
-
-
-              <div class="default-filter">
-                <label>&nbsp;</label><br />
-                <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
-                 <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
-                  <span></span> <b class="caret"></b>
-                </div>
-              </div>
                 
               <div class="default-filter form-group">
                 <label>Origin</label><br />
@@ -530,6 +480,32 @@
                   <option value="6">Hub; Trans-shipment</option>
                   <option value="7">Not defined</option>
                 </select>
+              </div>
+
+              <div class="default-filter form-group">
+                <div class="btn-group"> 
+                <label>Milestone</label><br />
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="">
+                    <span class="selection">None selected</span> <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Estimated Time of Departure</a></li>
+                    <li><a href="#">Actual Departure</a></li>
+                    <li><a href="#">Estimated Arrival Final Destination</a></li>
+                    <li><a href="#">Actual Arrival Final Destination</a></li>
+                    <li><a href="#">Estimated Delivery</a></li>
+                    <li><a href="#">Actual Delivery</a></li>
+                  </ul>
+                </div>
+              </div>
+
+
+              <div class="default-filter">
+                <label>Milestone date</label><br />
+                <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                 <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                  <span></span> <b class="caret"></b>
+                </div>
               </div>
 
               <div class="default-filter">
@@ -819,8 +795,8 @@
                           cb(start, end);
 
                       });
-              </script>
-      <!--/daterangepicker-->
+              </script><!--/daterangepicker-->
+      
 
   <!--/scripts for this page-->
     

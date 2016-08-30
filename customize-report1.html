@@ -89,34 +89,13 @@
         <div class="col-lg-6"">
           <!--report options-->
           <div class="pull-right">
-            <a class="btn btn-primary" href="shipment-report-results4.html" role="button">Run</a>
+            <a class="btn btn-primary" href="shipment-report-results.html" role="button">Run</a>
             <button type="button" class="btn btn-default">Save</button>
             <button type="button" class="btn btn-default">Cancel</button>
           </div><!--/report options-->
         </div>
 
-      </div>
-
-        
-      
-          <div class="modal fade" id="schedule-modal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title">Add Schedule</h4>
-                </div>
-                <div class="modal-body">
-                  <img src="images/schedule-img.png" height="325px" alt=" ">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-          </div><!-- /.modal -->
-       
+      </div>    
     
     
     <!--fields-filters-cols-row-->
@@ -369,37 +348,10 @@
 
             <!-- filters panel body -->
             <div class="panel-body">
-
-
-              <div class="default-filter form-group">
-                <div class="btn-group"> 
-                <label>Milestone</label><br />
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="">
-                    <span class="selection">None selected</span> <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Estimated Time of Departure</a></li>
-                    <li><a href="#">Actual Departure</a></li>
-                    <li><a href="#">Estimated Arrival Final Destination</a></li>
-                    <li><a href="#">Actual Arrival Final Destination</a></li>
-                    <li><a href="#">Estimated Delivery</a></li>
-                    <li><a href="#">Actual Delivery</a></li>
-                  </ul>
-                </div>
-              </div>
-
-
-              <div class="default-filter">
-                <label>&nbsp;</label><br />
-                <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
-                 <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
-                  <span></span> <b class="caret"></b>
-                </div>
-              </div>
                 
               <div class="default-filter form-group">
                 <label>Origin</label><br />
-                <input list="originList" class="form-control hide-arrow awesomplete" aria-describedby="basic-addon1" value="China (all ports)" data-multiple />
+                <input list="originList" class="form-control hide-arrow awesomplete" aria-describedby="basic-addon1" data-multiple />
                 <datalist id="originList">
                   <option>Ashkhabad, Turkmenistan (ASB)</option>
                   <option>Bishkek, Kyrgyzstan (FRU)</option>
@@ -435,7 +387,7 @@
 
               <div class="default-filter form-group">
                 <label>Destination</label><br />
-                <input list="destList" class="form-control hide-arrow awesomplete" aria-describedby="basic-addon1" value="New York, NY (NYC)" data-multiple />
+                <input list="destList" class="form-control hide-arrow awesomplete" aria-describedby="basic-addon1" data-multiple />
                 <datalist id="destList">
                   <option>Albany, New Zealand (AB9)</option>
                   <option>Bosset, Papua New Guinea (BSV)</option>
@@ -475,15 +427,12 @@
                 <input type="text" class="form-control" aria-describedby="basic-addon1">
               </div>
 
-                
-
-
               <div class="default-filter">
                 <label>Status</label><br />
                 <select id="status" multiple="multiple">
                   <option value="1">Not onhand</option>
                   <option value="2">Onhand</option>
-                  <option value="3" selected="selected">In transit</option>
+                  <option value="3">In transit</option>
                   <option value="4">Arrived, not released</option>
                   <option value="5">Released</option>
                   <option value="6">Pending delivery</option>
@@ -495,13 +444,44 @@
                 <label>Mode</label><br />
                 <select id="mode" multiple="multiple">
                   <option value="1">Air</option>
-                  <option value="2" selected="selected">Ocean</option>
+                  <option value="2">Ocean</option>
                   <option value="3">Transcon</option>
                   <option value="4">Rail</option>
                   <option value="5">Sea/Air</option>
                   <option value="6">Hub; Trans-shipment</option>
                   <option value="7">Not defined</option>
                 </select>
+              </div>
+
+              <div class="default-filter form-group">
+                <div class="btn-group"> 
+                <label>Milestone</label><br />
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="">
+                    <span class="selection">None selected</span> <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Estimated Time of Departure</a></li>
+                    <li><a href="#">Actual Departure</a></li>
+                    <li><a href="#">Estimated Arrival Final Destination</a></li>
+                    <li><a href="#">Actual Arrival Final Destination</a></li>
+                    <li><a href="#">Estimated Delivery</a></li>
+                    <li><a href="#">Actual Delivery</a></li>
+                  </ul>
+                </div>
+              </div>
+
+
+              <div class="default-filter">
+                <label>Milestone date</label><br />
+                <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                 <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                  <span></span> <b class="caret"></b>
+                </div>
+              </div>
+
+              <div class="default-filter">
+                <label></label><br />
+                <span class="drop-here">Drop field here</span>
               </div>
 
             </div> <!-- /filters panel body -->
@@ -658,13 +638,15 @@
               </div>
             </div><!-- /sort order modal -->
             
+            
+            
               <div class="panel-body">
                   
                 <div id="right-copy-1tomany" class="dragula-container column">
-                  <div>Origin</div>
-                  <div>Status</div>
-                  <div>Destination</div>
                   <div>Expeditors Reference</div>
+                  <div>Origin</div>
+                  <div>Destination</div>
+                  <div>Status</div>
                   <div>Primary Reference</div>
                   <span class="drop-here">Drop field here</span>
                 </div>
@@ -683,7 +665,7 @@
     
     
 
-   <!--scripts for this page--> 
+    <!--scripts for this page--> 
 
       
       <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -806,3 +788,4 @@
     
   </body>
 </html>
+

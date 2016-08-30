@@ -71,13 +71,37 @@
         <!--report options-->
         <div class="pull-right">
           <a class="btn btn-primary" href="shipment-report-results2.html" role="button">Run</a>
-          <a class="btn btn-default" href="customize-report2.html" role="button">Customize</a>
-          <button type="button" class="btn btn-default">Save</button>
+          <a class="btn btn-default" href="customize-report6.html" role="button">Customize</a>
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#saveModal">Save</button>
           <button type="button" class="btn btn-default">Cancel</button>
         </div>
         <!--/report options-->
 
-        <h2 class="clearfix">Shipments</h2>
+        <!-- save report modal -->
+      <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Save Report</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputName">Report name</label>
+                  <input type="email" class="form-control" id="exampleInputName" placeholder="">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <a class="btn btn-primary" href="shipment-report-results5.html" role="button">Save report</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- /save report modal -->
+
+        <h2 class="clearfix">On the Water</h2>
 
        <!--filters panel-->
       <form>
@@ -85,10 +109,9 @@
             
         <div class="panel-body">
 
-
           <div class="default-filter form-group">
             <label>Origin</label><br />
-            <input list="originList" class="form-control hide-arrow awesomplete" aria-describedby="basic-addon1" value="Shanghai, China (SHA)" data-multiple />
+            <input list="originList" class="form-control hide-arrow awesomplete" aria-describedby="basic-addon1" value="China (all ports)" data-multiple />
             <datalist id="originList">
               <option>Ashkhabad, Turkmenistan (ASB)</option>
               <option>Bishkek, Kyrgyzstan (FRU)</option>
@@ -177,12 +200,13 @@
               <option value="7">Delivery (completed)</option>
             </select>
           </div>
-  
+        
+
           <div class="default-filter">
             <label>Mode</label><br />
             <select id="mode" multiple="multiple">
               <option value="1">Air</option>
-              <option value="2">Ocean</option>
+              <option value="2" selected="selected">Ocean</option>
               <option value="3">Transcon</option>
               <option value="4">Rail</option>
               <option value="5">Sea/Air</option>
@@ -191,31 +215,30 @@
             </select>
           </div>
 
-           <div class="default-filter form-group">
-                <div class="btn-group"> 
-                <label>Milestone</label><br />
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="">
-                    <span class="selection">None selected</span> <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Estimated Time of Departure</a></li>
-                    <li><a href="#">Actual Departure</a></li>
-                    <li><a href="#">Estimated Arrival Final Destination</a></li>
-                    <li><a href="#">Actual Arrival Final Destination</a></li>
-                    <li><a href="#">Estimated Delivery</a></li>
-                    <li><a href="#">Actual Delivery</a></li>
-                  </ul>
-                </div>
-              </div>
+          <div class="default-filter form-group">
+            <div class="btn-group"> 
+              <label>Milestone</label><br />
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="selection">Estimated Delivery</span> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Estimated Time of Departure</a></li>
+                  <li><a href="#">Actual Departure</a></li>
+                  <li><a href="#">Estimated Arrival Final Destination</a></li>
+                  <li><a href="#">Actual Arrival Final Destination</a></li>
+                  <li><a href="#">Estimated Delivery</a></li>
+                  <li><a href="#">Actual Delivery</a></li>
+                </ul>
+            </div>
+          </div>
 
-
-              <div class="default-filter">
-                <label>Milestone date</label><br />
-                <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
-                 <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
-                  <span></span> <b class="caret"></b>
-                </div>
-              </div>
+          <div class="default-filter">
+            <label>Milestone date</label><br />
+            <div style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+             <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+              <span>September 4, 2016 - September 10, 2016</span> <b class="caret"></b>
+            </div>
+          </div>
 
             </div><!-- end of filters panel body -->
 
@@ -253,7 +276,7 @@
         </div>
         <!--/result options-->
 
-        <p class="clearfix">Date as of: 07-Jul-2016 03:12 PM | Found: 15</p>
+        <p class="clearfix">Date as of: 07-Jul-2016 03:12 PM | Found: 30</p>
 
         <!--results-->
         <div class="panel panel-default">
@@ -261,132 +284,301 @@
             <table class="table table-hover table-background"> 
                 <thead> 
                     <tr>
-                        <th>Origin</th> 
+                        <th>Estimated delivery</th>
                         <th>Destination</th>
-                        <th>Expeditors reference</th> 
+                        <th>Consignee name</th>
+                        <th>Origin</th> 
                         <th>Status</th>
-                        <th>Primary reference</th>
-
+                        <th>Expeditors reference</th> 
+                        <th>Primary reference</th>                     
                     </tr>
                 </thead> 
                 <tbody> 
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>5-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Qingdao, China (TAO)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
+                        
                         
                   </tr> 
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>5-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Qingdao, China (TAO)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
                     </tr>
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>5-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Qingdao, China (TAO)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
                   </tr> 
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>5-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Qingdao, China (TAO)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
                     </tr> 
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>6-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Qingdao, China (TAO)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
                   </tr> 
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>6-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Qingdao, China (TAO)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
                     </tr> 
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>6-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Qingdao, China (TAO)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
                   </tr> 
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>6-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Qingdao, China (TAO)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
                     </tr>
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>7-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Qingdao, China (TAO)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
                   </tr> 
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>7-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Qingdao, China (TAO)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
                     </tr> 
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>7-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
                   </tr> 
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>7-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
                     </tr>
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>7-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
                     </tr> 
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>8-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
                   </tr> 
                     <tr> 
-                        <td>Shanghai, China (SHA)</td>
+                        <td>8-Sep-2016 06:49 AM</td>
                         <td>New York, NY (NYC)</td>
-                        <td><a href="#">1234567890</a></td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
                         <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                    </tr>
+                    <tr> 
+                        <td>8-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                  </tr> 
+                    <tr> 
+                        <td>8-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                    </tr>
+                    <tr> 
+                        <td>8-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                  </tr> 
+                    <tr> 
+                        <td>8-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                    </tr> 
+                    <tr> 
+                        <td>8-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                  </tr> 
+                    <tr> 
+                        <td>9-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                    </tr> 
+                    <tr> 
+                        <td>9-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                  </tr> 
+                    <tr> 
+                        <td>9-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                    </tr>
+                    <tr> 
+                        <td>9-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                  </tr> 
+                    <tr> 
+                        <td>9-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Shanghai, China (SHA)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                    </tr> 
+                    <tr> 
+                        <td>9-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Xiamen, China (XMN)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                  </tr> 
+                    <tr> 
+                        <td>9-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Xiamen, China (XMN)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                    </tr>
+                    <tr> 
+                        <td>9-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Xiamen, China (XMN)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                    </tr> 
+                    <tr> 
+                        <td>9-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Xiamen, China (XMN)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
+                        <td>987654321</td>
+                  </tr> 
+                    <tr> 
+                        <td>10-Sep-2016 06:49 AM</td>
+                        <td>New York, NY (NYC)</td>
+                        <td>Awesome Company</td>
+                        <td>Xiamen, China (XMN)</td>
+                        <td>In Transit</td>
+                        <td><a href="#">1234567890</a></td>
                         <td>987654321</td>
                     </tr>   
-                    
                 </tbody> 
             </table>
         </div>
         <!--/results-->
 
- 
+     
+        
+        
+
     </div><!-- /.container -->
 
+    <!--scripts for this page-->
 
-<!--scripts for this page-->
 
       <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
@@ -489,7 +681,6 @@
               </script><!--/daterangepicker-->
 
     <!--/scripts for this page-->
-
     
     <!-- Bootstrap core JavaScript
     ================================================== -->
