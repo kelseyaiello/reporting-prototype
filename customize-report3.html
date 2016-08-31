@@ -76,26 +76,27 @@
         <li class="active">New Customized Report</li>
     </ol> 
 
-      <!--title-row-->
-      <div class="row">
-        <div class="col-lg-6">
-          <h2>New Customized Report</h2>
 
-          <p>Based on Shipments report</p>
+    <!--title-row-->
+    <div class="row">
+      <div class="col-lg-6">
+        <h3 class="report-name">New Customized Report</h3>
 
-          <p><a href="#schedule-modal" data-toggle="modal">Add schedule</a></p>
-        </div>
+        <p>Based on Shipments report</p>
 
-        <div class="col-lg-6"">
-          <!--report options-->
-          <div class="pull-right">
-            <a class="btn btn-primary" href="shipment-report-results3.html" role="button">Run</a>
-            <button type="button" class="btn btn-default">Save</button>
-            <button type="button" class="btn btn-default">Cancel</button>
-          </div><!--/report options-->
-        </div>
+        <p><a href="#schedule-modal" data-toggle="modal">Add schedule</a></p>
+      </div>
 
-      </div>    
+      <div class="col-lg-6"">
+        <!--report options-->
+        <div class="text-right">
+          <a class="btn btn-primary" href="shipment-report-results3.html" role="button">Run</a>
+          <button type="button" class="btn btn-default">Save</button>
+          <button type="button" class="btn btn-default">Cancel</button>
+        </div><!--/report options-->
+      </div>
+
+    </div><!--/title-row-->    
     
     
     <!--fields-filters-cols-row-->
@@ -349,31 +350,6 @@
             <!-- filters panel body -->
             <div class="panel-body">
 
-              <div class="default-filter form-group">
-                <div class="btn-group"> 
-                <label>Milestone</label><br />
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="">
-                    <span class="selection">None selected</span> <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Estimated Time of Departure</a></li>
-                    <li><a href="#">Actual Departure</a></li>
-                    <li><a href="#">Estimated Arrival Final Destination</a></li>
-                    <li><a href="#">Actual Arrival Final Destination</a></li>
-                    <li><a href="#">Estimated Delivery</a></li>
-                    <li><a href="#">Actual Delivery</a></li>
-                  </ul>
-                </div>
-              </div>
-
-
-              <div class="default-filter">
-                <label>&nbsp;</label><br />
-                <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
-                 <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
-                  <span></span> <b class="caret"></b>
-                </div>
-              </div>
                 
               <div class="default-filter form-group">
                 <label>Origin</label><br />
@@ -480,6 +456,32 @@
                   <option value="6">Hub; Trans-shipment</option>
                   <option value="7">Not defined</option>
                 </select>
+              </div>
+
+              <div class="default-filter form-group">
+                <div class="btn-group"> 
+                <label>Milestone</label><br />
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="">
+                    <span class="selection">None selected</span> <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Estimated Time of Departure</a></li>
+                    <li><a href="#">Actual Departure</a></li>
+                    <li><a href="#">Estimated Arrival Final Destination</a></li>
+                    <li><a href="#">Actual Arrival Final Destination</a></li>
+                    <li><a href="#">Estimated Delivery</a></li>
+                    <li><a href="#">Actual Delivery</a></li>
+                  </ul>
+                </div>
+              </div>
+
+
+              <div class="default-filter">
+                <label>Milestone date</label><br />
+                <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                 <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                  <span></span> <b class="caret"></b>
+                </div>
               </div>
 
               <div class="default-filter">

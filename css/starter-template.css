@@ -3,7 +3,11 @@ body {
 }
 
 .padding {
-  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.report-name {
+  margin-top:0
 }
 
 .panel-body > .field > div {
@@ -111,6 +115,46 @@ body {
 .hide-arrow::-webkit-calendar-picker-indicator {
   display: none;
 }
+
+ #note {
+        margin-left: 40%;
+        padding: 15px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+        position: absolute;
+        z-index: 6001;
+        top: -7px;
+        width: 300px;
+    }
+
+    .cssanimations.csstransforms #note {
+        -webkit-transform: translateY(-50px);
+        -webkit-animation: slideDown 5s .25s 1 ease forwards;
+        -moz-transform:    translateY(-50px);
+        -moz-animation:    slideDown 5s .25s 1 ease forwards;
+    }
+
+    #close {
+      background: url(images/close.png);
+      height: 16px;
+      width: 16px;
+      cursor: pointer;
+    }
+    .cssanimations.csstransforms #close {
+      display: none;
+    }
+    
+    @-webkit-keyframes slideDown {
+        0%, 100% { -webkit-transform: translateY(-50px); }
+        10%, 90% { -webkit-transform: translateY(0px); }
+    }
+    @-moz-keyframes slideDown {
+        0%, 100% { -moz-transform: translateY(-50px); }
+        10%, 90% { -moz-transform: translateY(0px); }
+    }
 
 
 

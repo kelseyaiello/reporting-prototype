@@ -38,6 +38,18 @@
 
   <body>
 
+    <div id="note">
+      Report saved
+    </div>
+
+    <script>
+       close = document.getElementById("close");
+       close.addEventListener('click', function() {
+         note = document.getElementById("note");
+         note.style.display = 'none';
+       }, false);
+    </script>
+
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -61,21 +73,14 @@
       </div>
     </nav>
 
+    
+
     <div class="container-fluid starter-template">
 
         <ol class="breadcrumb">
             <li><a href="index.html">Home</a></li>
             <li class="active">Run Report</li>
         </ol>  
-
-        <!--report options-->
-        <div class="pull-right">
-          <a class="btn btn-primary" href="shipment-report-results2.html" role="button">Run</a>
-          <a class="btn btn-default" href="customize-report6.html" role="button">Edit</a>
-          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#saveModal">Save</button>
-          <button type="button" class="btn btn-default">Cancel</button>
-        </div>
-        <!--/report options-->
 
         <!-- save report modal -->
       <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -101,7 +106,24 @@
         </div>
       </div><!-- /save report modal -->
 
-        <h2 class="clearfix">On the Water</h2>
+
+        <!--title-row-->
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="report-name">On the Water</h3>
+        </div>
+
+        <div class="col-lg-6"">
+          <!--report options-->
+          <div class="pull-right padding">
+            <a class="btn btn-primary" href="shipment-report-results5.html" role="button">Run</a>
+            <a class="btn btn-default" href="customize-report6.html" role="button">Edit</a>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#saveModal">Save</button>
+            <button type="button" class="btn btn-default">Cancel</button>
+          </div><!--/report options-->
+        </div>
+
+      </div><!--/title-row-->
 
        <!--filters panel-->
       <form>
@@ -679,6 +701,10 @@
 
                       });
               </script><!--/daterangepicker-->
+
+              <script src="js/modernizr.custom.80028.js"></script>
+
+
 
     <!--/scripts for this page-->
     
