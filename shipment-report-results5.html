@@ -42,14 +42,6 @@
       Report saved
     </div>
 
-    <script>
-       close = document.getElementById("close");
-       close.addEventListener('click', function() {
-         note = document.getElementById("note");
-         note.style.display = 'none';
-       }, false);
-    </script>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -701,8 +693,18 @@
 
                       });
               </script><!--/daterangepicker-->
-
+              
+              <!--report saved notification-->
               <script src="js/modernizr.custom.80028.js"></script>
+
+              <script>
+                 close = document.getElementById("close");
+                 close.addEventListener('click', function() {
+                   note = document.getElementById("note");
+                   note.style.display = 'none';
+                 }, false);
+              </script><!--/report saved notification-->
+              
 
 
 
